@@ -1,3 +1,5 @@
+" source /blah/blah/vimrc_plugins
+
 " ===== PLUGINS via `vim-plug` ===== "
 
 " run `vim-plug` in terminal to install manager

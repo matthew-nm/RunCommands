@@ -1,3 +1,5 @@
+# source '/blah/blah/zshrc_p9k'
+
 # ===== IT'S OVER 9,000! ===== #
 
 # Powerlevel load
@@ -13,8 +15,8 @@ POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time anaconda aws) # battery)
 POWERLEVEL9K_STATUS_VERBOSE=true
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=0
+#POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
+#POWERLEVEL9K_SHORTEN_DIR_LENGTH=0
 POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S}"
 
 # Powerlevel Set Icons

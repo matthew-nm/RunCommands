@@ -1,3 +1,5 @@
+" source /blah/blah/vimrc
+
 " ===== VISUAL ===== "
 
 " Turn on hybrid numbers (absolute + relative = hybrid)

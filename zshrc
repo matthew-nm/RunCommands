@@ -1,3 +1,5 @@
+# source '/blah/blah/zshrc'
+
 eval "$(dircolors -b)"
 
 # make less more friendly for non-text input files, see lesspipe(1)
