@@ -1,0 +1,17 @@
+" ===== PLUGINS via `vim-plug` ===== "
+
+" run `vim-plug` in terminal to install manager
+
+" run the following within vim:
+"   PlugInstall
+"   PlugUpdate
+"   PlugClean
+"   PlugUpgrade
+
+call plug#begin()
+
+"Plug 'user/repo', 'branch_or_tag'
+Plug 'scrooloose/nerdtree'
+Plug 'plasticboy/vim-markdown'
+
+call plug#end()

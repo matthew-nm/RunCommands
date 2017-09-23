@@ -25,6 +25,11 @@ export TERM="xterm-256color"
 function proc() {
     ps aux | grep -v 'grep --color=auto' | grep $1
 }
+function vim-plug() {
+    mkdir -p ~/.vim/autoload
+    curl -fLo ~/.vim/autoload/plug.vim \
+      https://raw.github.com/junegunn/vim-plug/master/plug.vim
+}
 
 # Aliases
 alias rootmount='echo mount\ -o\ remount,rw\ 0\ /'
