@@ -19,7 +19,7 @@ fi
 HISTFILE=~/.zsh_history
 SAVEHIST=1000
 
-export DISPLAY=:0.0
+#export DISPLAY=:0.0
 
 export TERM="xterm-256color"
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
