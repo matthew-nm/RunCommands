@@ -33,8 +33,11 @@ if empty(argv())
     au VimEnter * NERDTree
 endif
 
+" Show hidden files by default
+let NERDTreeShowHidden=1
+
 " Ignore certain filetypes
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', '\.swp$']
 
 
 " ===== COLORS ===== "
