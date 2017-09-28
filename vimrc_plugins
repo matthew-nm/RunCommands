@@ -13,7 +13,10 @@
 call plug#begin()
 
 "Plug 'user/repo', 'branch_or_tag'
+
 Plug 'scrooloose/nerdtree'
 Plug 'plasticboy/vim-markdown'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
