@@ -53,12 +53,17 @@ set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
+" ===== <LEADER> ===== "
+
 " Remap <leader> key
 let mapleader = ","
 let g:mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
+
+" Toggle NERDTree
+nmap <leader>t :NERDTreeToggle<cr>
 
 
 " ===== EDITING ===== "
@@ -68,11 +73,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-" Turn on smart auto indentation
-set ai
-set si
-
-" Shuffle lines using Ctrl+j/k (hold OK)
+" Shuffle lines using Ctrl+j/k (hold: OK!)
 " Normal mode
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
