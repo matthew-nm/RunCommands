@@ -96,10 +96,10 @@ map <leader>s? z=
 
 " Turn on mouse stuff
 set mouse+=a
-if &term =~ '^screen'
+"if &term =~ '^screen'
     " tmux knows the extended mouse mode
     set ttymouse=xterm2
-endif
+"endif
 
 " Set scroll offset (buffer around cursor)
 set scrolloff=7
@@ -109,12 +109,6 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-
-" Easily move windows around w/ Ctrl+H/J/K/L
-map <C-H> <C-w>H
-map <C-J> <C-w>J
-map <C-K> <C-w>K
-map <C-l> <C-w>L
 
 " Map <space> to search
 map <space> /
