@@ -8,9 +8,11 @@ set number relativenumber
 " Turn on search highlighting
 set hlsearch
 
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
+" Disable filetype plugins
+filetype plugin off
+
+" Turn off shitty indenting
+filetype indent off
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -63,10 +65,8 @@ nmap <leader>w :w!<cr>
 
 " Set tab length to (4) AND convert to spaces
 set tabstop=4
+set shiftwidth=4
 set expandtab
-
-" Turn on smart tab
-set smarttab
 
 " Turn on smart auto indentation
 set ai
@@ -140,4 +140,3 @@ let NERDTreeIgnore = ['\.pyc$', '\.swp$']
 highlight LineNr term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
 highlight CursorLineNr term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
 highlight Statement term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
-
