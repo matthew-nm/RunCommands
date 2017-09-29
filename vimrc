@@ -134,6 +134,9 @@ let NERDTreeShowHidden=1
 " Ignore certain filetypes
 let NERDTreeIgnore = ['\.pyc$', '\.swp$']
 
+" Some weird bug fix...
+let g:NERDTreeGlyphReadOnly = "RO"
+
 
 " ===== COLORS ===== "
 
