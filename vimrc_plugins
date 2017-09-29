@@ -18,5 +18,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'plasticboy/vim-markdown'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'vim-airline/vim-airline'
+Plug 'neovimhaskell/haskell-vim'
 
 call plug#end()
