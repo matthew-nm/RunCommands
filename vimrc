@@ -62,9 +62,14 @@ let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
+" Fast quitting
+nmap <leader>q :qa<Enter>
+
 " Toggle NERDTree
 nmap <leader>t :NERDTreeToggle<cr>
 
+" Open CtrlP
+nmap <leader>p :CtrlP<Enter>
 
 " ===== EDITING ===== "
 
@@ -75,14 +80,14 @@ set expandtab
 
 " Shuffle lines using Ctrl+j/k (hold: OK!)
 " Normal mode
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
 " Insert mode
-inoremap <C-j> <ESC>:m .+1<CR>==gi
-inoremap <C-k> <ESC>:m .-2<CR>==gi
+inoremap <A-j> <ESC>:m .+1<CR>==gi
+inoremap <A-k> <ESC>:m .-2<CR>==gi
 " Visual mode
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
 
 " Set toggle spell check w/ <leader>ss
 map <leader>ss :setlocal spell!<cr>
@@ -119,9 +124,9 @@ map <C-space> ?
 " ===== NERDTREE ===== "
 
 " Open NERDTree if vim opened w/o file
-if empty(argv())
-    au VimEnter * NERDTree
-endif
+"if empty(argv())
+"    au VimEnter * NERDTree
+"endif
 
 " Show hidden files by default
 let NERDTreeShowHidden=1
@@ -138,3 +143,17 @@ let g:NERDTreeGlyphReadOnly = "RO"
 highlight LineNr term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
 highlight CursorLineNr term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
 highlight Statement term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
+
+
+" ===== WEIRD FIXES ===== "
+
+" Map all <Alt>-key combinations to use <Esc> sequences instead
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
+" ... and set ttimeout
+" (if it's faster than x milliseconds, it's an escape sequence)
+set ttimeout ttimeoutlen=50

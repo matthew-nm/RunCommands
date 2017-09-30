@@ -11,13 +11,16 @@
 "   PlugUpgrade
 
 call plug#begin()
-
 "Plug 'user/repo', 'branch_or_tag'
 
+" General
 Plug 'scrooloose/nerdtree'
-Plug 'plasticboy/vim-markdown'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'vim-airline/vim-airline'
+Plug 'kien/ctrlp.vim'
+
+" Syntax
+Plug 'plasticboy/vim-markdown'
 Plug 'neovimhaskell/haskell-vim'
 
 call plug#end()
