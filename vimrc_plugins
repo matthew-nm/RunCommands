@@ -18,6 +18,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'vim-airline/vim-airline'
 Plug 'kien/ctrlp.vim'
+"Plug 't9md', { 'dir': '~/.vim-nerdtree_plugin_collections/nerdtree_plugin', 'do': './install nerdtree_open.vim' }
+Plug 'aufgang001/vim-nerdtree_plugin_open'
 
 " Syntax
 Plug 'plasticboy/vim-markdown'

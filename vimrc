@@ -131,6 +131,8 @@ let NERDTreeIgnore = ['\.pyc$', '\.swp$']
 " Some weird bug fix...
 let g:NERDTreeGlyphReadOnly = "RO"
 
+" Configure NerdtreePluginOpen
+let g:nerdtree_plugin_open_cmd = 'kde-open'
 
 " ===== COLORS ===== "
 
