@@ -24,3 +24,9 @@ Plug 'plasticboy/vim-markdown'
 Plug 'neovimhaskell/haskell-vim'
 
 call plug#end()
+
+
+
+" Random cleanup...
+filetype plugin off
+filetype indent off

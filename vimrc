@@ -8,12 +8,6 @@ set number relativenumber
 " Turn on search highlighting
 set hlsearch
 
-" Disable filetype plugins
-filetype plugin off
-
-" Turn off shitty indenting
-filetype indent off
-
 " Set to auto read when a file is changed from the outside
 set autoread
 
