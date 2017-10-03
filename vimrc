@@ -11,6 +11,10 @@ set hlsearch
 " Set to auto read when a file is changed from the outside
 set autoread
 
+" Turn on automatic writing (saving)
+set autowrite
+set autowriteall
+
 " Always show current position
 set ruler
 
