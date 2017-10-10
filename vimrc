@@ -76,7 +76,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-" Shuffle lines using Ctrl+j/k (hold: OK!)
+" Shuffle lines using Alt+j/k (hold: OK!)
 " Normal mode
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
