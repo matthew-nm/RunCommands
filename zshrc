@@ -61,6 +61,7 @@ alias sshserv='sudo rcsshd restart'
 alias cycleplasma='kquitapp5 plasmashell && kstart plasmashell'
 alias color256='for code ({000..255}) print -P -- "$code: %F{$code}\u2588\u2588\u2588\u2588 These are colors!%f"'
 
+alias o="kde-open"
 alias swd='pwd > ~/Scripts/shell/wd'
 alias lwd='dir=$(cat ~/Scripts/shell/wd); cd $dir'
 alias clip='xsel -ib'
