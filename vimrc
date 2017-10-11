@@ -2,6 +2,11 @@
 "
 " ===== GENERAL ===== "
 
+" Theme
+let g:airline_theme='angr'
+let g:airline_powerline_fonts=1
+set noshowmode
+
 " Turn on hybrid numbers (absolute + relative = hybrid)
 set number relativenumber
 
@@ -19,7 +24,7 @@ set autowriteall
 set ruler
 
 " Height of the command bar
-"set cmdheight=2
+"set cmdheight=1
 
 " A buffer becomes hidden when it is abandoned
 set hid

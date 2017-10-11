@@ -17,8 +17,10 @@ call plug#begin()
 Plug 'scrooloose/nerdtree'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 Plug 'aufgang001/vim-nerdtree_plugin_open'
+Plug 'tpope/vim-fugitive'
 
 " Syntax
 Plug 'plasticboy/vim-markdown'
