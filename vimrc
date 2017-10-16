@@ -8,7 +8,8 @@ let g:airline_powerline_fonts=1
 set noshowmode
 
 " Turn on hybrid numbers (absolute + relative = hybrid)
-set number relativenumber
+set number 
+"set relativenumber
 
 " Turn on search highlighting
 set hlsearch
