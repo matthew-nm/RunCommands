@@ -147,6 +147,9 @@ let g:nerdtree_plugin_open_cmd = 'kde-open'
 " Show dotfiles
 let g:ctrlp_show_hidden = 1
 
+" Don't use caching
+let g:ctrlp_use_caching = 0
+
 
 " ===== COLORS ===== "
 
