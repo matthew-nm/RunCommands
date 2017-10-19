@@ -79,16 +79,16 @@ set expandtab
 " Bind system clipboard
 vnoremap <C-c> "+y
 
-" Shuffle lines using Alt+j/k (hold: OK!)
-" Normal mode
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-" Insert mode
-inoremap <A-j> <ESC>:m .+1<CR>==gi
-inoremap <A-k> <ESC>:m .-2<CR>==gi
-" Visual mode
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
+"" Shuffle lines using Alt+j/k (hold: OK!)
+"" Normal mode
+"nnoremap <A-j> :m .+1<CR>==
+"nnoremap <A-k> :m .-2<CR>==
+"" Insert mode
+"inoremap <A-j> <ESC>:m .+1<CR>==gi
+"inoremap <A-k> <ESC>:m .-2<CR>==gi
+"" Visual mode
+"vnoremap <A-j> :m '>+1<CR>gv=gv
+"vnoremap <A-k> :m '<-2<CR>gv=gv
 
 " Set toggle spell check w/ <leader>ss
 map <leader>ss :setlocal spell!<cr>
