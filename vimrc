@@ -7,7 +7,7 @@ let g:airline_theme='angr'
 let g:airline_powerline_fonts=1
 set noshowmode
 
-" Turn on hybrid numbers (absolute + relative = hybrid)
+" Turn on numbers
 set number 
 "set relativenumber
 
@@ -34,17 +34,11 @@ set hid
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
-" Ignore case when searching
+" Search options
 set ignorecase
-
-" When searching try to be smart about cases 
 set smartcase
-
-" Highlight search results
 set hlsearch
-
-" Makes search act like search in modern browsers
-set incsearch 
+set incsearch  " search as you type
 
 " Don't redraw while executing macros (good performance config)
 set lazyredraw 
@@ -81,6 +75,9 @@ nmap <leader>p :CtrlP<Enter>
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+" Bind system clipboard
+vnoremap <C-c> "+y
 
 " Shuffle lines using Alt+j/k (hold: OK!)
 " Normal mode
