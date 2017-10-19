@@ -144,6 +144,13 @@ let g:NERDTreeGlyphReadOnly = "RO"
 " Configure NerdtreePluginOpen
 let g:nerdtree_plugin_open_cmd = 'kde-open'
 
+
+" ===== CtrlP ===== "
+
+" Show dotfiles
+let g:ctrlp_show_hidden = 1
+
+
 " ===== COLORS ===== "
 
 highlight LineNr term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
