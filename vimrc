@@ -63,6 +63,9 @@ nmap <leader>w :w!<cr>
 " Fast quitting
 nmap <leader>q :qa<Enter>
 
+" Fast window hiding
+nmap <leader>h :hide<Enter>
+
 " Toggle NERDTree
 nmap <leader>t :NERDTreeToggle<cr>
 
