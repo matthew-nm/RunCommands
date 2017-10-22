@@ -1,5 +1,5 @@
 " source /blah/blah/vimrc
-"
+
 " ===== GENERAL ===== "
 
 " Theme
@@ -16,16 +16,26 @@ set hlsearch
 
 " Set to auto read when a file is changed from the outside
 set autoread
+augroup checktime
+    au!
+    if !has("gui_running")
+        "silent! necessary otherwise throws errors when using command
+        "line window.
+        autocmd BufEnter        * silent! checktime
+        autocmd CursorHold      * silent! checktime
+        autocmd CursorHoldI     * silent! checktime
+        "these two _may_ slow things down. Remove if they do.
+        autocmd CursorMoved     * silent! checktime
+        autocmd CursorMovedI    * silent! checktime
+    endif
+augroup END
 
 " Turn on automatic writing (saving)
-set autowrite
-set autowriteall
+"set autowrite
+"set autowriteall
 
 " Always show current position
 set ruler
-
-" Height of the command bar
-"set cmdheight=1
 
 " A buffer becomes hidden when it is abandoned
 set hid
@@ -48,8 +58,8 @@ set magic
 
 " Show matching brackets when text indicator is over them
 set showmatch 
-" How many tenths of a second to blink when matching brackets
-set mat=2
+set mat=3  " how many tenths of a second to blink
+
 
 " ===== <LEADER> ===== "
 
@@ -63,6 +73,9 @@ nmap <leader>w :w!<cr>
 " Fast quitting
 nmap <leader>q :qa<Enter>
 
+" Turn off highlighting
+nmap <leader><space> :noh<Enter>
+
 " Fast window hiding
 nmap <leader>h :hide<Enter>
 
@@ -72,7 +85,12 @@ nmap <leader>t :NERDTreeToggle<cr>
 " Open CtrlP
 nmap <leader>p :CtrlP<Enter>
 
+
 " ===== EDITING ===== "
+
+" Set up/down to work better with wrapped lines
+nnoremap j gj
+nnoremap k gk
 
 " Set tab length to (4) AND convert to spaces
 set tabstop=4
