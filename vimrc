@@ -73,6 +73,9 @@ nmap <leader>w :w<cr>
 " Fast quitting
 nmap <leader>q :qa<Enter>
 
+" Fast v-split
+nmap <leader>v :vsplit<Enter>
+
 " Turn off highlighting
 nmap <leader><space> :noh<Enter>
 
