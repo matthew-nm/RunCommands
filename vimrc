@@ -185,12 +185,12 @@ highlight Statement term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE gu
 " ===== WEIRD FIXES ===== "
 
 " Map all <Alt>-key combinations to use <Esc> sequences instead
-let c='a'
-while c <= 'z'
-  exec "set <A-".c.">=\e".c
-  exec "imap \e".c." <A-".c.">"
-  let c = nr2char(1+char2nr(c))
-endw
+"let c='a'
+"while c <= 'z'
+"  exec "set <A-".c.">=\e".c
+"  exec "imap \e".c." <A-".c.">"
+"  let c = nr2char(1+char2nr(c))
+"endw
 " ... and set ttimeout
 " (if it's faster than x milliseconds, it's an escape sequence)
-set ttimeout ttimeoutlen=50
+"set ttimeout ttimeoutlen=50
