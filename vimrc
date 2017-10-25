@@ -76,6 +76,9 @@ nmap <leader>q :qa<Enter>
 " Fast v-split
 nmap <leader>v :vsplit<Enter>
 
+" Fast new tab
+nmap <leader>t :tabnew<Enter>
+
 " Turn off highlighting
 nmap <leader><space> :noh<Enter>
 
@@ -83,7 +86,7 @@ nmap <leader><space> :noh<Enter>
 nmap <leader>h :hide<Enter>
 
 " Toggle NERDTree
-nmap <leader>t :NERDTreeToggle<cr>
+nmap <leader>e :NERDTreeToggle<cr>
 
 " Open CtrlP
 nmap <leader>p :CtrlP<Enter>
