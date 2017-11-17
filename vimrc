@@ -160,7 +160,7 @@ map <C-space> ?
 let NERDTreeShowHidden=1
 
 " Ignore certain filetypes
-let NERDTreeIgnore = ['\.pyc$', '\.swp$']
+let NERDTreeIgnore = ['\.pyc$', '\.swp$', '\.swo$']
 
 " Some weird bug fix...
 let g:NERDTreeGlyphReadOnly = "RO"
