@@ -88,6 +88,9 @@ nmap <leader>h :hide<Enter>
 " Toggle NERDTree
 nmap <leader>e :NERDTreeToggle<cr>
 
+" Close all buffers (then, reopen NERDTree)
+nmap <leader>c :%bd \| NERDTreeToggle<Enter>
+
 " Open CtrlP
 nmap <leader>p :CtrlP<Enter>
 
