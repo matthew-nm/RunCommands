@@ -37,6 +37,12 @@ augroup END
 " Write all buffers before navigating from Vim to tmux pane
 let g:tmux_navigator_save_on_switch = 2
 
+" Store temporary files in a central location
+let vimtmp = $HOME . '/.tmp/vim/' . getpid()
+silent! call mkdir(vimtmp, "p", 0700)
+let &backupdir=vimtmp
+let &directory=vimtmp
+
 " Always show current position
 set ruler
 
