@@ -21,6 +21,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 Plug 'aufgang001/vim-nerdtree_plugin_open'
 Plug 'tpope/vim-fugitive'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Syntax
 Plug 'plasticboy/vim-markdown'
