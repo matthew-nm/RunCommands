@@ -150,17 +150,17 @@ set mouse+=a
 " Set scroll offset (buffer around cursor)
 set scrolloff=7
 
-" Easily change window focus w/ Ctrl+h/j/k/l
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
-" Easily change window focus w/ Ctrl+<ArrowKeys>
-map <C-Left>  <C-w>h
-map <C-Down>  <C-w>j
-map <C-Up>    <C-w>k
-map <C-Right> <C-w>l
+" Easily change window focus w/ Ctrl+h/j/k/l, Ctrl+<ArrowKeys>
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <C-Left>  :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-Down>  :TmuxNavigateDown<cr>
+nnoremap <silent> <C-Up>    :TmuxNavigateUp<cr>
+nnoremap <silent> <C-Right> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-h>     :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-j>     :TmuxNavigateDown<cr>
+nnoremap <silent> <C-k>     :TmuxNavigateUp<cr>
+nnoremap <silent> <C-l>     :TmuxNavigateRight<cr>
+nnoremap <silent> <C-\>     :TmuxNavigatePrevious<cr>
 
 " Map <space> to search
 map <space> /
