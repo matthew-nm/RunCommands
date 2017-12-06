@@ -189,6 +189,9 @@ let g:ctrlp_show_hidden = 1
 " Don't use caching
 let g:ctrlp_use_caching = 0
 
+" Allow multiple buffers of same file
+let g:ctrlp_switch_buffer = 0
+
 
 " ===== COLORS ===== "
 
