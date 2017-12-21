@@ -76,23 +76,26 @@ set mat=3  " how many tenths of a second to blink
 let mapleader = ","
 let g:mapleader = ","
 
-" Fast saving
+" Save
 nmap <leader>w :w<cr>
 
-" Fast quitting
+" Quit
 nmap <leader>q :qa<Enter>
 
-" Fast v-split
+" V-split
 nmap <leader>v :vsplit<Enter>
 
-" Fast new tab
+" New tab
 nmap <leader>t :tabnew<Enter>
 
 " Turn off highlighting
 nmap <leader><space> :noh<Enter>
 
-" Fast window hiding
+" Hide buffer
 nmap <leader>h :hide<Enter>
+
+" Delete buffer
+nmap <leader>d :bd<Enter>
 
 " Toggle NERDTree
 nmap <leader>e :NERDTreeToggle<cr>
@@ -100,8 +103,12 @@ nmap <leader>e :NERDTreeToggle<cr>
 " Close all buffers (then, reopen NERDTree)
 nmap <leader>c :%bd \| NERDTreeToggle<Enter>
 
-" Open CtrlP
-nmap <leader>p :CtrlP<Enter>
+" Far.vim replace
+nmap <leader>r :Farp<Enter>
+nmap <leader>R :Fardo<Enter>
+
+" Minimap toggle
+let g:minimap_toggle='<leader>m'
 
 
 " ===== EDITING ===== "

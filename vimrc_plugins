@@ -15,13 +15,17 @@ call plug#begin()
 
 " General
 Plug 'scrooloose/nerdtree'
-Plug 'jlanzarotta/bufexplorer'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 Plug 'aufgang001/vim-nerdtree_plugin_open'
-Plug 'tpope/vim-fugitive'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'brooth/far.vim'
+Plug 'severin-lemaignan/vim-minimap'
+
+" Unused?
+Plug 'jlanzarotta/bufexplorer'
+Plug 'tpope/vim-fugitive'
 
 " Syntax
 Plug 'plasticboy/vim-markdown'
