@@ -189,6 +189,9 @@ let g:nerdtree_plugin_open_cmd = 'kde-open'
 
 " ===== CtrlP ===== "
 
+" Prioritize filename matches
+let g:ctrlp_by_filename = 1
+
 " Show dotfiles
 let g:ctrlp_show_hidden = 1
 
