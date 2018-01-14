@@ -24,7 +24,6 @@ Plug 'brooth/far.vim'
 Plug 'severin-lemaignan/vim-minimap'
 
 " Unused?
-Plug 'jlanzarotta/bufexplorer'
 Plug 'tpope/vim-fugitive'
 
 " Syntax
