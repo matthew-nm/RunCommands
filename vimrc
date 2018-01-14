@@ -144,6 +144,10 @@ map <leader>sp [s
 map <leader>sa zg
 map <leader>s? z=
 
+" Sudo Save
+"   To use this command, type :Sudow
+"   Note: all custom commands must start uppercase
+command Sudow w !sudo tee % >/dev/null
 
 " ===== CONTROL ===== "
 
