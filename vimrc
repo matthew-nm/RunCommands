@@ -85,6 +85,9 @@ nmap <leader>q :qa<Enter>
 " V-split
 nmap <leader>v :vsplit<Enter>
 
+" H-split
+nmap <leader>s :split<Enter>
+
 " New tab
 nmap <leader>t :tabnew<Enter>
 
