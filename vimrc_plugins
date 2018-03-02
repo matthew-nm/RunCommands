@@ -22,6 +22,7 @@ Plug 'aufgang001/vim-nerdtree_plugin_open'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'brooth/far.vim'
 Plug 'severin-lemaignan/vim-minimap'
+Plug 'JamshedVesuna/vim-markdown-preview'
 
 " Unused?
 Plug 'tpope/vim-fugitive'

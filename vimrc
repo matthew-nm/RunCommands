@@ -216,6 +216,11 @@ let g:ctrlp_use_caching = 0
 let g:ctrlp_switch_buffer = 0
 
 
+" ===== Markdown Preview ===== '
+
+let vim_markdown_preview_hotkey='<C-m>'
+
+
 " ===== COLORS ===== "
 
 highlight LineNr term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
