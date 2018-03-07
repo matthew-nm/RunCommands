@@ -1,72 +1,22 @@
 " source /blah/blah/vimrc
 
-" ===== GENERAL ===== "
 
-" Theme
-let g:airline_theme='angr'
-let g:airline_powerline_fonts=1
-set noshowmode
+" ===== VISUAL ===== "
 
 " Turn on numbers
-set number 
-"set relativenumber
+set number
 
 " Turn on search highlighting
 set hlsearch
 
-" Set to auto read when a file is changed from the outside
-set autoread
-augroup checktime
-    au!
-    if !has("gui_running")
-        "silent! necessary otherwise throws errors when using command
-        "line window.
-        autocmd BufEnter        * silent! checktime
-        autocmd CursorHold      * silent! checktime
-        autocmd CursorHoldI     * silent! checktime
-        "these two _may_ slow things down. Remove if they do.
-        autocmd CursorMoved     * silent! checktime
-        autocmd CursorMovedI    * silent! checktime
-    endif
-augroup END
-
-" Turn on automatic writing (saving)
-"set autowrite
-"set autowriteall
-
-" Write all buffers before navigating from Vim to tmux pane
-let g:tmux_navigator_save_on_switch = 2
-
-" Store temporary files in a central location
-let vimtmp = $HOME . '/.tmp/vim/' . getpid()
-silent! call mkdir(vimtmp, "p", 0700)
-let &backupdir=vimtmp
-let &directory=vimtmp
-
 " Always show current position
 set ruler
 
-" A buffer becomes hidden when it is abandoned
-set hid
-
-" Configure backspace so it acts as it should act
-set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
-
-" Search options
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch  " search as you type
-
 " Don't redraw while executing macros (good performance config)
-set lazyredraw 
-
-" For regular expressions turn magic on
-set magic
+set lazyredraw
 
 " Show matching brackets when text indicator is over them
-set showmatch 
+set showmatch
 set mat=3  " how many tenths of a second to blink
 
 
@@ -114,11 +64,15 @@ nmap <leader>R :Fardo<Enter>
 let g:minimap_toggle='<leader>m'
 
 
-" ===== EDITING ===== "
+" ===== EDITING / MOVEMENT ===== "
 
 " Set up/down to work better with wrapped lines
 nnoremap j gj
 nnoremap k gk
+
+" Configure backspace so it acts as it should act
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
 
 " Set tab length to (4) AND convert to spaces
 set tabstop=4
@@ -152,7 +106,8 @@ map <leader>s? z=
 "   Note: all custom commands must start uppercase
 command Sudow w !sudo tee % >/dev/null
 
-" ===== CONTROL ===== "
+
+" ===== CONTROL / SEARCH ===== "
 
 " Turn on mouse stuff
 set mouse+=a
@@ -180,63 +135,49 @@ nnoremap <silent> <C-\>     :TmuxNavigatePrevious<cr>
 map <space> /
 map <C-space> ?
 
+" For regular expressions turn magic on
+set magic
 
-" ===== NERDTREE ===== "
-
-" Open NERDTree if vim opened w/o file
-"if empty(argv())
-"    au VimEnter * NERDTree
-"endif
-
-" Show hidden files by default
-let NERDTreeShowHidden=1
-
-" Ignore certain filetypes
-let NERDTreeIgnore = ['\.pyc$', '\.swp$', '\.swo$']
-
-" Some weird bug fix...
-let g:NERDTreeGlyphReadOnly = "RO"
-
-" Configure NerdtreePluginOpen
-let g:nerdtree_plugin_open_cmd = 'kde-open'
+" Search options
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch  " search as you type
 
 
-" ===== CtrlP ===== "
+" ===== BUFFERS / FILES ===== "
 
-" Prioritize filename matches
-let g:ctrlp_by_filename = 1
+" A buffer becomes hidden when it is abandoned
+set hid
 
-" Show dotfiles
-let g:ctrlp_show_hidden = 1
+" Write all buffers before navigating from vim to tmux pane
+let g:tmux_navigator_save_on_switch = 2
 
-" Don't use caching
-let g:ctrlp_use_caching = 0
+" Store temporary files in a central location
+let vimtmp = $HOME . '/.tmp/vim/' . getpid()
+silent! call mkdir(vimtmp, "p", 0700)
+let &backupdir=vimtmp
+let &directory=vimtmp
 
-" Allow multiple buffers of same file
-let g:ctrlp_switch_buffer = 0
-
-
-" ===== Markdown Preview ===== '
-
-let vim_markdown_preview_hotkey='<C-m>'
+" Set to auto read when a file is changed from the outside
+set autoread
+augroup checktime
+    au!
+    if !has("gui_running")
+        "silent! necessary otherwise throws errors when using command
+        "line window.
+        autocmd BufEnter        * silent! checktime
+        autocmd CursorHold      * silent! checktime
+        autocmd CursorHoldI     * silent! checktime
+        "these two _may_ slow things down. Remove if they do.
+        autocmd CursorMoved     * silent! checktime
+        autocmd CursorMovedI    * silent! checktime
+    endif
+augroup END
 
 
 " ===== COLORS ===== "
 
-highlight LineNr term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
+highlight LineNr       term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
 highlight CursorLineNr term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
-highlight Statement term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
-
-
-" ===== WEIRD FIXES ===== "
-
-" Map all <Alt>-key combinations to use <Esc> sequences instead
-"let c='a'
-"while c <= 'z'
-"  exec "set <A-".c.">=\e".c
-"  exec "imap \e".c." <A-".c.">"
-"  let c = nr2char(1+char2nr(c))
-"endw
-" ... and set ttimeout
-" (if it's faster than x milliseconds, it's an escape sequence)
-"set ttimeout ttimeoutlen=50
+highlight Statement    term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE

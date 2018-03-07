@@ -1,5 +1,6 @@
 " source /blah/blah/vimrc_plugins
 
+
 " ===== PLUGINS via `vim-plug` ===== "
 
 " run `vim-plug` in terminal to install manager
@@ -34,7 +35,68 @@ Plug 'neovimhaskell/haskell-vim'
 call plug#end()
 
 
+" ========================== "
+" ===== CONFIGURATIONS ===== "
+" ========================== "
 
+" ===== Vim Airline ===== "
+
+" Set theme
+let g:airline_theme='angr'
+set noshowmode
+
+" Use powerline fonts if supported
+if $POWERLINE == 1
+  let g:airline_powerline_fonts=1
+endif
+
+" Get rid of annoying symbols
+let g:airline_symbols = {}
+let g:airline_symbols.linenr = ''
+let g:airline_symbols.maxlinenr = ''
+
+" Get rid of whitespace warning
+silent! call airline#extensions#whitespace#disable()
+let g:airline_section_warning = airline#section#create(['ycm_warning_count','syntastic-warn'])
+
+
+" ===== NERDTree ===== "
+
+" Show hidden files by default
+let NERDTreeShowHidden = 1
+
+" Ignore certain filetypes
+let NERDTreeIgnore = ['\.pyc$', '\.swp$', '\.swo$']
+
+" Some weird bug fix...
+let g:NERDTreeGlyphReadOnly = "RO"
+
+" Configure NerdtreePluginOpen
+let g:nerdtree_plugin_open_cmd = 'kde-open'
+
+
+" ===== CtrlP ===== "
+
+" Prioritize filename matches
+let g:ctrlp_by_filename = 1
+
+" Show dotfiles
+let g:ctrlp_show_hidden = 1
+
+" Don't use caching
+let g:ctrlp_use_caching = 0
+
+" Allow multiple buffers of same file
+let g:ctrlp_switch_buffer = 0
+
+
+" ===== Markdown Preview ===== '
+
+let vim_markdown_preview_hotkey = '<C-m>'
+
+
+"
+"
 " Random cleanup...
 filetype plugin off
 filetype indent off

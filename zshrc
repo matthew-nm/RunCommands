@@ -1,5 +1,14 @@
 # source '/blah/blah/zshrc'
 
+# Set environment variables
+export TERM="xterm-256color"
+if [ -z $POWERLINE ];then
+  export POWERLINE=1
+fi
+if [ -z $VCS_OFF ];then
+  export VCS_OFF=0
+fi
+
 eval "$(dircolors -b)"
 
 # make less more friendly for non-text input files, see lesspipe(1)
@@ -18,9 +27,6 @@ fi
 
 HISTFILE=~/.zsh_history
 SAVEHIST=1000
-
-export TERM="xterm-256color"
-#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # Improved X11 forwarding through GNU Screen (or tmux).
 #   If not in screen or tmux, update the DISPLAY cache.
@@ -60,6 +66,8 @@ alias installtar='tar -zxvf'
 alias sshserv='sudo rcsshd restart'
 alias cycleplasma='kquitapp5 plasmashell && kstart plasmashell'
 alias color256='for code ({000..255}) print -P -- "$code: %F{$code}\u2588\u2588\u2588\u2588 These are colors!%f"'
+alias vcsoff='env VCS_OFF=1 zsh'
+alias vcson='env VCS_OFF=0 zsh'
 
 alias o="kde-open"
 alias swd='pwd > ~/Scripts/shell/wd'
