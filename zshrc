@@ -1,5 +1,6 @@
 # source '/blah/blah/zshrc'
 
+
 # Set environment variables
 export TERM="xterm-256color"
 if [ -z $POWERLINE ];then
