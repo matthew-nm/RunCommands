@@ -67,8 +67,9 @@ alias installtar='tar -zxvf'
 alias sshserv='sudo rcsshd restart'
 alias cycleplasma='kquitapp5 plasmashell && kstart plasmashell'
 alias color256='for code ({000..255}) print -P -- "$code: %F{$code}\u2588\u2588\u2588\u2588 These are colors!%f"'
-alias vcsoff='env VCS_OFF=1 zsh'
-alias vcson='env VCS_OFF=0 zsh'
+alias vcsoff='export VCS_OFF=1; zsh'
+alias vcson='export VCS_OFF=0; zsh'
+alias vcs='vcson'
 
 alias o="kde-open"
 alias swd='pwd > ~/Scripts/shell/wd'
