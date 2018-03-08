@@ -60,9 +60,6 @@ nmap <leader>c :%bd \| NERDTreeToggle<Enter>
 nmap <leader>r :Farp<Enter>
 nmap <leader>R :Fardo<Enter>
 
-" Minimap toggle
-let g:minimap_toggle='<leader>m'
-
 
 " ===== EDITING / MOVEMENT ===== "
 
