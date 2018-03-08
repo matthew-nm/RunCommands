@@ -1,3 +1,7 @@
++ View all buffers/registers
+  :buffers
+  :registers
+
 + Move pane to far l/d/u/r
   Ctrl+w H
   Ctrl+w J
