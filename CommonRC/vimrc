@@ -13,7 +13,7 @@ set hlsearch
 set ruler
 
 " Don't redraw while executing macros (good performance config)
-set lazyredraw
+"set lazyredraw
 
 " Show matching brackets when text indicator is over them
 set showmatch
