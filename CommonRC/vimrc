@@ -53,8 +53,11 @@ nmap <leader>d :bd<Enter>
 " Toggle NERDTree
 nmap <leader>e :NERDTreeToggle<cr>
 
+" Close all hidden buffers
+nmap <leader>c :call CloseHiddenBuffers()<Enter>
+
 " Close all buffers (then, reopen NERDTree)
-nmap <leader>c :%bd \| NERDTreeToggle<Enter>
+nmap <leader>C :%bd \| NERDTreeToggle<Enter>
 
 " Far.vim replace
 nmap <leader>r :Farp<Enter>
@@ -155,6 +158,19 @@ let vimtmp = $HOME . '/.tmp/vim/' . getpid()
 silent! call mkdir(vimtmp, "p", 0700)
 let &backupdir=vimtmp
 let &directory=vimtmp
+
+" Close hidden buffers
+function CloseHiddenBuffers()
+  let open_buffers = []
+  for i in range(tabpagenr('$'))
+    call extend(open_buffers, tabpagebuflist(i + 1))
+  endfor
+  for num in range(1, bufnr("$") + 1)
+    if buflisted(num) && index(open_buffers, num) == -1
+      exec "bdelete ".num
+    endif
+  endfor
+endfunction
 
 " Set to auto read when a file is changed from the outside
 set autoread
