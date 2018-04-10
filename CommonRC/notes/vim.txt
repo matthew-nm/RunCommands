@@ -7,3 +7,7 @@
   Ctrl+w J
   Ctrl+w K
   Ctrl+w L
+
++ Convert file between OS's
+  :set ff=unix
+  :set ff=dos
