@@ -110,7 +110,7 @@ set mouse+=a
 set scrolloff=7
 
 " Set folding options
-set foldlevelstart=99
+set foldlevelstart=1
 hi Folded ctermbg=234
 
 " Change tmux windows w/ Ctrl+h/j/k/l -or- Ctrl+<ArrowKeys>
