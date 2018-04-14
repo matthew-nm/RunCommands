@@ -109,6 +109,10 @@ set mouse+=a
 " Set scroll offset (buffer around cursor)
 set scrolloff=7
 
+" Set folding options
+set foldmethod=indent
+set foldnestmax=1
+
 " Change tmux windows w/ Ctrl+h/j/k/l -or- Ctrl+<ArrowKeys>
 let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <C-Left>  :TmuxNavigateLeft<cr>

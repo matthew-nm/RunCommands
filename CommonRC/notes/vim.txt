@@ -1,13 +1,20 @@
-+ View all buffers/registers
+View all buffers/registers,
   :buffers
   :registers
 
-+ Move pane to far l/d/u/r
+Move pane to far l/d/u/r,
   Ctrl+w H
   Ctrl+w J
   Ctrl+w K
   Ctrl+w L
 
-+ Convert file between OS's
+Fold commands,
+  zM
+  zR
+  za
+  zj
+  zk
+
+Convert file between OS's,
   :set ff=unix
   :set ff=dos
