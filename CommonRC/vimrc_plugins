@@ -23,6 +23,7 @@ Plug 'aufgang001/vim-nerdtree_plugin_open'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'brooth/far.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
+"Plug 'tmhedberg/simpylfold'
 Plug 'ryankuczka/vim-pyfold'
 
 " Unused?
@@ -102,5 +103,5 @@ let vim_markdown_preview_hotkey = '<C-m>'
 "
 "
 " Random cleanup...
-filetype plugin off
+"filetype plugin off  " need for folding plugins
 filetype indent off
