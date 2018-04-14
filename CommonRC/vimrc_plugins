@@ -101,5 +101,5 @@ let vim_markdown_preview_hotkey = '<C-m>'
 "
 "
 " Random cleanup...
-filetype plugin off
+"filetype plugin off
 filetype indent off
