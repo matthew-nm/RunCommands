@@ -23,6 +23,7 @@ Plug 'aufgang001/vim-nerdtree_plugin_open'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'brooth/far.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'ryankuczka/vim-pyfold'
 
 " Unused?
 Plug 'tpope/vim-fugitive'
