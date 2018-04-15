@@ -23,8 +23,9 @@ Plug 'aufgang001/vim-nerdtree_plugin_open'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'brooth/far.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
-"Plug 'tmhedberg/simpylfold'
-Plug 'ryankuczka/vim-pyfold'
+Plug 'tmhedberg/simpylfold'
+"Plug 'ryankuczka/vim-pyfold'
+Plug 'konfekt/fastfold'
 
 " Unused?
 Plug 'tpope/vim-fugitive'
@@ -100,8 +101,15 @@ let g:ctrlp_switch_buffer = 0
 let vim_markdown_preview_hotkey = '<C-m>'
 
 
+" ===== PyFold ===== "
+
+let g:pyfold_braces = 0
+let g:pyfold_brackets = 0
+let g:pyfold_parens = 0
+
+
 "
 "
 " Random cleanup...
-"filetype plugin off  " need for folding plugins
+"filetype plugin off  " leave 'on' for folding plugins
 filetype indent off

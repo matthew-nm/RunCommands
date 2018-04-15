@@ -83,6 +83,9 @@ nnoremap k gk
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
+" Disable auto comment insertion
+autocmd FileType * setlocal formatoptions-=cro
+
 " Set tab length to (4) AND convert to spaces
 set tabstop=4
 set shiftwidth=4
