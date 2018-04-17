@@ -71,6 +71,8 @@ alias vcsoff='export VCS_OFF=1; zsh'
 alias vcson='export VCS_OFF=0; zsh'
 alias vcs='vcson'
 
+alias a='tmux a -t'
+
 alias o="kde-open"
 alias swd='pwd > ~/Scripts/shell/wd'
 alias lwd='dir=$(cat ~/Scripts/shell/wd); cd $dir'
