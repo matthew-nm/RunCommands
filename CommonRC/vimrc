@@ -12,12 +12,16 @@ set hlsearch
 " Always show current position
 set ruler
 
-" Don't redraw while executing macros (good performance config)
+" Don't redraw while executing macros (performance config)
 "set lazyredraw
 
 " Show matching brackets when text indicator is over them
 set showmatch
 set mat=3  " how many tenths of a second to blink
+
+" Redraw syntax highlighting w/ <F12> (in case of errors)
+noremap <F12> <Esc>:syntax sync fromstart<CR>
+inoremap <F12> <C-o>:syntax sync fromstart<CR>
 
 
 " ===== <LEADER> ===== "
@@ -114,7 +118,7 @@ set scrolloff=7
 
 " Set folding options
 set foldlevelstart=1
-hi Folded ctermfg=202
+hi Folded ctermfg=209
 hi Folded ctermbg=234
 
 " Change tmux windows w/ Ctrl+h/j/k/l -or- Ctrl+<ArrowKeys>
