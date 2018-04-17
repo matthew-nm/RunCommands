@@ -18,3 +18,11 @@ Fold commands,
 Convert file between OS's,
   :set ff=unix
   :set ff=dos
+
+Key mapping help,
+  :help index
+  :help <<key to search>>
+  :help map-which-keys
+  :nmap
+  :cmap
+  :vmap

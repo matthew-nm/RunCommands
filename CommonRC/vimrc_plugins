@@ -25,6 +25,7 @@ Plug 'brooth/far.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'ryankuczka/vim-pyfold'
 Plug 'konfekt/fastfold'
+Plug 'vim-scripts/ShowTrailingWhitespace'
 
 " Unused?
 Plug 'tpope/vim-fugitive'
