@@ -52,7 +52,7 @@ preexec() {
 #trap 'preexec' DEBUG
 
 function proc() {
-    ps aux | grep -v 'grep --color=auto' | grep $1
+    ps aux | grep -v 'grep --color=' | grep $1
 }
 function vim-plug() {
     mkdir -p ~/.vim/autoload
