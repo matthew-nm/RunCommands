@@ -12,12 +12,16 @@ set hlsearch
 " Always show current position
 set ruler
 
+" Set line highlighting
+set cursorline
+"set cursorcolumn
+
 " Don't redraw while executing macros (performance config)
 "set lazyredraw
 
 " Show matching brackets when text indicator is over them
-set showmatch
-set mat=3  " how many tenths of a second to blink
+"set showmatch
+"set mat=3  " how many tenths of a second to blink
 
 " Redraw syntax highlighting w/ <F12> (in case of errors)
 noremap <F12> <Esc>:syntax sync fromstart<CR>
@@ -79,11 +83,11 @@ map <leader>s? z=
 
 " ===== EDITING / MOVEMENT ===== "
 
-" Set up/down to work better with wrapped lines
+" Set up/down to work with wrapped lines
 nnoremap j gj
 nnoremap k gk
 
-" Configure backspace so it acts as it should act
+" Fix backspace
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
@@ -119,8 +123,6 @@ set scrolloff=7
 
 " Set folding options
 set foldlevelstart=1
-hi Folded ctermfg=209
-hi Folded ctermbg=234
 
 " Change tmux windows w/ Ctrl+h/j/k/l -or- Ctrl+<ArrowKeys>
 let g:tmux_navigator_no_mappings = 1
@@ -197,3 +199,7 @@ augroup END
 highlight LineNr       term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
 highlight CursorLineNr term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
 highlight Statement    term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
+highlight CursorLine   ctermbg=236 cterm=none
+"highlight CursorColumn ctermbg=236
+highlight Folded       ctermbg=234
+  "209
