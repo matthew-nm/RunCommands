@@ -74,6 +74,7 @@ alias vcs='vcson'
 alias a='tmux a -t'
 
 alias o="kde-open"
+alias ll='ls -l'
 alias swd='pwd > ~/Scripts/shell/wd'
 alias lwd='dir=$(cat ~/Scripts/shell/wd); cd $dir'
 alias clip='xsel -ib'
