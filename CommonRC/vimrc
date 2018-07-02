@@ -122,7 +122,7 @@ set mouse+=a
 set scrolloff=7
 
 " Set folding options
-set foldlevelstart=1
+set foldlevelstart=10
 
 " Change tmux windows w/ Ctrl+h/j/k/l -or- Ctrl+<ArrowKeys>
 let g:tmux_navigator_no_mappings = 1
@@ -202,4 +202,4 @@ highlight Statement    term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE
 highlight CursorLine   ctermbg=236 cterm=none
 "highlight CursorColumn ctermbg=236
 highlight Folded       ctermbg=234
-  "209
+  "209, 234

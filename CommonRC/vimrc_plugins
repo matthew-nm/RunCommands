@@ -23,7 +23,7 @@ Plug 'aufgang001/vim-nerdtree_plugin_open'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'brooth/far.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
-Plug 'ryankuczka/vim-pyfold'
+Plug 'tmhedberg/SimpylFold'
 Plug 'konfekt/fastfold'
 Plug 'vim-scripts/ShowTrailingWhitespace'
 
@@ -33,6 +33,7 @@ Plug 'tpope/vim-fugitive'
 " Syntax
 Plug 'plasticboy/vim-markdown'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'vim-python/python-syntax'
 
 call plug#end()
 
@@ -101,11 +102,16 @@ let g:ctrlp_switch_buffer = 0
 let vim_markdown_preview_hotkey = '<C-m>'
 
 
-" ===== PyFold ===== "
+" ===== SimpylFold ===== "
 
-let g:pyfold_braces = 0
-let g:pyfold_brackets = 0
-let g:pyfold_parens = 0
+let g:SimpylFold_fold_import = 0
+let g:SimpylFold_fold_docstring = 0
+let g:SimpylFold_docstring_preview = 1
+
+
+" ===== Python-Syntax ===== "
+
+let g:python_highlight_all = 1
 
 
 "
