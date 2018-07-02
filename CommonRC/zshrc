@@ -1,6 +1,52 @@
 # source '/blah/blah/zshrc'
 
 
+# ===== Aliases ===== #
+
+alias rootmount='echo mount\ -o\ remount,rw\ 0\ /'
+alias installrpm='rpm -ivh'
+alias installtar='tar -zxvf'
+alias sshserv='sudo rcsshd restart'
+alias cycleplasma='kquitapp5 plasmashell && kstart plasmashell'
+alias color256='for code ({000..255}) print -P -- "$code: %F{$code}\u2588\u2588\u2588\u2588 These are colors!%f"'
+alias vcsoff='export VCS_OFF=1; zsh'
+alias vcson='export VCS_OFF=0; zsh'
+alias vcs='vcson'
+
+alias a='tmux a -t'
+
+alias o="kde-open"
+alias ll='ls -l'
+alias swd='pwd > ~/Scripts/shell/wd'
+alias lwd='dir=$(cat ~/Scripts/shell/wd); cd $dir'
+alias clip='xsel -ib'
+
+alias capsoff="setxkbmap -layout us -option caps:escape"
+alias capson="setxkbmap -layout us -option"
+
+
+# ===== Functions ===== #
+
+function proc() {
+  ps aux | grep -v 'grep --color=' | grep $1
+}
+
+function ar() {
+  echo -ne "\033]30;$1\007"
+  tmux a -t $1
+  echo -ne "\033]30;$(pwd|rev|cut -d / -f1|rev) : zsh\007"
+}
+
+function vim-plug() {
+  mkdir -p ~/.vim/autoload
+  curl -fLo ~/.vim/autoload/plug.vim \
+    https://raw.github.com/junegunn/vim-plug/master/plug.vim
+}
+
+
+# ===== Other Crap ===== #
+
+
 # Set environment variables
 export TERM="xterm-256color"
 if [ -z $POWERLINE ];then
@@ -26,6 +72,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=always'
 fi
 
+# History settings
 HISTFILE=~/.zsh_history
 SAVEHIST=1000
 
@@ -50,34 +97,3 @@ preexec() {
     #echo DISPLAY = $DISPLAY, display file = `cat ~/.display`, STY = $STY, TMUX = $TMUX
 }
 #trap 'preexec' DEBUG
-
-function proc() {
-    ps aux | grep -v 'grep --color=' | grep $1
-}
-function vim-plug() {
-    mkdir -p ~/.vim/autoload
-    curl -fLo ~/.vim/autoload/plug.vim \
-      https://raw.github.com/junegunn/vim-plug/master/plug.vim
-}
-
-# Aliases
-alias rootmount='echo mount\ -o\ remount,rw\ 0\ /'
-alias installrpm='rpm -ivh'
-alias installtar='tar -zxvf'
-alias sshserv='sudo rcsshd restart'
-alias cycleplasma='kquitapp5 plasmashell && kstart plasmashell'
-alias color256='for code ({000..255}) print -P -- "$code: %F{$code}\u2588\u2588\u2588\u2588 These are colors!%f"'
-alias vcsoff='export VCS_OFF=1; zsh'
-alias vcson='export VCS_OFF=0; zsh'
-alias vcs='vcson'
-
-alias a='tmux a -t'
-
-alias o="kde-open"
-alias ll='ls -l'
-alias swd='pwd > ~/Scripts/shell/wd'
-alias lwd='dir=$(cat ~/Scripts/shell/wd); cd $dir'
-alias clip='xsel -ib'
-
-alias capsoff="setxkbmap -layout us -option caps:escape"
-alias capson="setxkbmap -layout us -option"
