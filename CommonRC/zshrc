@@ -37,6 +37,14 @@ function ar() {
   echo -ne "\033]30;$(pwd|rev|cut -d / -f1|rev) : zsh\007"
 }
 
+function rename() {
+  echo -ne "\033]30;$1\007"
+}
+
+function unname() {
+  echo -ne "\033]30;$(pwd|rev|cut -d / -f1|rev) : zsh\007"
+}
+
 function vim-plug() {
   mkdir -p ~/.vim/autoload
   curl -fLo ~/.vim/autoload/plug.vim \
