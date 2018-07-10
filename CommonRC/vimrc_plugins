@@ -26,6 +26,7 @@ Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'tmhedberg/SimpylFold'
 Plug 'konfekt/fastfold'
 Plug 'vim-scripts/ShowTrailingWhitespace'
+  " alternative: ntpeters/vim-better-whitespace
 
 " Unused?
 Plug 'tpope/vim-fugitive'
