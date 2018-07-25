@@ -108,6 +108,14 @@ vnoremap <C-c> "+y
 "   Note: all custom commands must start uppercase
 command Sudow w !sudo tee % >/dev/null
 
+" Clean trailing whitespace
+command! CleanWhitespace
+  \ let b:bufview=winsaveview() |
+  \ :%s/\s\+$//g             |
+  \ :execute "normal \<C-O>" |
+  \ call winrestview(b:bufview) |
+  \ unlet b:bufview
+
 
 " ===== CONTROL / SEARCH ===== "
 
