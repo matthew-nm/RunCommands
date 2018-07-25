@@ -16,6 +16,9 @@ set ruler
 set cursorline
 "set cursorcolumn
 
+" Set long line marker
+"set colorcolumn=85
+
 " Don't redraw while executing macros (performance config)
 "set lazyredraw
 
@@ -214,5 +217,6 @@ highlight CursorLineNr term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE
 highlight Statement    term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
 highlight CursorLine   ctermbg=236 cterm=none
 "highlight CursorColumn ctermbg=236
+highlight ColorColumn  ctermbg=236
 highlight Folded       ctermbg=234
   "209, 234
