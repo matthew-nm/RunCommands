@@ -74,6 +74,9 @@ nmap <leader>C :%bd \| NERDTreeToggle<Enter>
 nmap <leader>r :Farp<Enter>
 nmap <leader>R :Fardo<Enter>
 
+" Replace all instances of word under cusor
+nmap <leader>s :ReplaceWordUnderCursor<cr>
+
 " Set toggle spell check w/ <leader>ss
 map <leader>ss :setlocal spell!<cr>
 
@@ -114,10 +117,21 @@ command Sudow w !sudo tee % >/dev/null
 " Clean trailing whitespace
 command! CleanWhitespace
   \ let b:bufview=winsaveview() |
-  \ :%s/\s\+$//g             |
-  \ :execute "normal \<C-O>" |
-  \ call winrestview(b:bufview) |
-  \ unlet b:bufview
+  \ :%s/\s\+$//g                |
+  \ :execute "normal \<C-O>"    |
+  \ call winrestview(b:bufview)
+
+" Replace all instances of word under cursor
+command! ReplaceWordUnderCursor
+  \ let b:ignorecase=&ignorecase                        |
+  \ set noignorecase                                    |
+  \ let b:bufview=winsaveview()                         |
+  \ let b:foo=expand('<cword>')                         |
+  \ :execute "let b:bar=input('Replace" b:foo "with ')" |
+  \ :execute ":%s/\\<".b:foo."\\>/".b:bar."/g"          |
+  \ :execute "?\\<".b:bar."\\>"                         |
+  \ call winrestview(b:bufview)                         |
+  \ let &ignorecase=b:ignorecase
 
 
 " ===== CONTROL / SEARCH ===== "
@@ -218,5 +232,5 @@ highlight Statement    term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE
 highlight CursorLine   ctermbg=236 cterm=none
 "highlight CursorColumn ctermbg=236
 highlight ColorColumn  ctermbg=236
-highlight Folded       ctermbg=234
-  "209, 234
+highlight Folded       ctermbg=209
+"   209, 234
