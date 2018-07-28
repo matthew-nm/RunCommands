@@ -47,7 +47,7 @@ nmap <leader>q :qa<Enter>
 nmap <leader>v :vsplit<Enter>
 
 " H-split
-nmap <leader>s :split<Enter>
+nmap <leader>V :split<Enter>
 
 " New tab
 nmap <leader>t :tabnew<Enter>
@@ -123,15 +123,12 @@ command! CleanWhitespace
 
 " Replace all instances of word under cursor
 command! ReplaceWordUnderCursor
-  \ let b:ignorecase=&ignorecase                        |
-  \ set noignorecase                                    |
   \ let b:bufview=winsaveview()                         |
   \ let b:foo=expand('<cword>')                         |
   \ :execute "let b:bar=input('Replace" b:foo "with ')" |
   \ :execute ":%s/\\<".b:foo."\\>/".b:bar."/g"          |
   \ :execute "?\\<".b:bar."\\>"                         |
-  \ call winrestview(b:bufview)                         |
-  \ let &ignorecase=b:ignorecase
+  \ call winrestview(b:bufview)
 
 
 " ===== CONTROL / SEARCH ===== "
@@ -161,18 +158,19 @@ nnoremap <silent> <C-k>     :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l>     :TmuxNavigateRight<cr>
 nnoremap <silent> <C-\>     :TmuxNavigatePrevious<cr>
 
-" Map <space> to search
-map <space> /
-map <C-space> ?
+" Map <space> to insensitive search
+map <space> :execute "/\\c".input('i/')<cr>
+
+" Map <space><space> to word search
+map <space><space> :execute "/\\<".input('w/')."\\>"<cr>
 
 " For regular expressions turn magic on
 set magic
 
 " Search options
-set ignorecase
 set smartcase
 set hlsearch
-set incsearch  " search as you type
+set incsearch  "search as you type
 
 
 " ===== BUFFERS / FILES ===== "
