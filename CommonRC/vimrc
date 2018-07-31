@@ -230,5 +230,4 @@ highlight Statement    term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE
 highlight CursorLine   ctermbg=236 cterm=none
 "highlight CursorColumn ctermbg=236
 highlight ColorColumn  ctermbg=236
-highlight Folded       ctermbg=209
-"   209, 234
+highlight Folded       ctermfg=209 ctermbg=234
