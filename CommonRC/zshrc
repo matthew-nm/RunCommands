@@ -13,8 +13,6 @@ alias vcsoff='export VCS_OFF=1; zsh'
 alias vcson='export VCS_OFF=0; zsh'
 alias vcs='vcson'
 
-alias a='tmux a -t'
-
 alias o="kde-open"
 alias ll='ls -l'
 alias swd='pwd > ~/Scripts/shell/wd'
@@ -23,6 +21,11 @@ alias clip='xsel -ib'
 
 alias capsoff="setxkbmap -layout us -option caps:escape"
 alias capson="setxkbmap -layout us -option"
+
+# Dev tools
+alias a='tmux a -t'
+alias git='git '
+alias logg='log --graph --decorate --all'
 
 
 # ===== Functions ===== #
