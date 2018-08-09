@@ -16,17 +16,20 @@ call plug#begin()
 
 " General
 Plug 'scrooloose/nerdtree'
+Plug 'aufgang001/vim-nerdtree_plugin_open'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
-Plug 'aufgang001/vim-nerdtree_plugin_open'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'brooth/far.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'tmhedberg/SimpylFold'
 Plug 'konfekt/fastfold'
 Plug 'vim-scripts/ShowTrailingWhitespace'
   " alternative: ntpeters/vim-better-whitespace
+
+" Tmux
+Plug 'tpope/vim-tbone'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Unused?
 Plug 'tpope/vim-fugitive'

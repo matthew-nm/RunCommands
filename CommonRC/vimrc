@@ -109,6 +109,10 @@ set expandtab
 " Bind system clipboard
 vnoremap <C-c> "+y
 
+" Yank to tmux clipboard (vim-tbone)
+nnoremap ty :Tyank<cr>
+vnoremap ty :Tyank<cr>
+
 " Sudo Save
 "   To use this command, type :Sudow
 "   Note: all custom commands must start uppercase
