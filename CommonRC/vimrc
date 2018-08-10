@@ -64,6 +64,9 @@ nmap <leader>d :bd<Enter>
 " Toggle NERDTree
 nmap <leader>e :NERDTreeToggle<cr>
 
+" Toggle tagbar
+nmap <leader>E :TagbarToggle<cr>
+
 " Close all hidden buffers
 nmap <leader>c :call CloseHiddenBuffers()<Enter>
 
@@ -89,9 +92,16 @@ map <leader>s? z=
 
 " ===== EDITING / MOVEMENT ===== "
 
+" Basic
+set nocompatible
+
 " Set up/down to work with wrapped lines
 nnoremap j gj
 nnoremap k gk
+
+" Move to next lint error
+nmap <silent> <F1> :ALENextWrap<cr>
+nmap <silent> <F2> :ALEPreviousWrap<cr>
 
 " Fix backspace
 set backspace=eol,start,indent
@@ -235,3 +245,4 @@ highlight CursorLine   ctermbg=236 cterm=none
 "highlight CursorColumn ctermbg=236
 highlight ColorColumn  ctermbg=236
 highlight Folded       ctermfg=209 ctermbg=234
+highlight SignColumn   ctermbg=None

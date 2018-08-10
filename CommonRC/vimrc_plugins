@@ -16,11 +16,15 @@ call plug#begin()
 
 " General
 Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'majutsushi/tagbar'
+  " needs universal-ctags intalled
 Plug 'aufgang001/vim-nerdtree_plugin_open'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 Plug 'brooth/far.vim'
+Plug 'w0rp/ale'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'tmhedberg/SimpylFold'
 Plug 'konfekt/fastfold'
@@ -30,6 +34,12 @@ Plug 'vim-scripts/ShowTrailingWhitespace'
 " Tmux
 Plug 'tpope/vim-tbone'
 Plug 'christoomey/vim-tmux-navigator'
+
+" Autocomplete
+Plug 'shougo/deoplete.nvim'
+  " needs neovim python package for python used by vim
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
 
 " Unused?
 Plug 'tpope/vim-fugitive'
@@ -106,11 +116,27 @@ let g:ctrlp_switch_buffer = 0
 let vim_markdown_preview_hotkey = '<C-m>'
 
 
+" ===== deoplete ===== "
+
+let g:deoplete#enable_at_startup = 0
+autocmd InsertEnter * call deoplete#enable()
+
+let g:python3_host_prog = expand('~/bin/python')
+
+
 " ===== SimpylFold ===== "
 
 let g:SimpylFold_fold_import = 0
 let g:SimpylFold_fold_docstring = 0
 let g:SimpylFold_docstring_preview = 1
+
+
+" ===== ale (linter) ===== "
+
+let g:ale_set_highlights = 0
+let g:ale_sign_column_always = 1
+"let g:ale_change_sign_column_color = 1
+let g:airline#extensions#ale#enabled = 1
 
 
 " ===== Python-Syntax ===== "
