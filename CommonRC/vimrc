@@ -176,10 +176,10 @@ nnoremap <silent> <C-l>     :TmuxNavigateRight<cr>
 nnoremap <silent> <C-\>     :TmuxNavigatePrevious<cr>
 
 " Map <space> to insensitive search
-map <space> :execute "/\\c".input('i/')<cr>
+nmap <space> :execute "/\\c".input('i/')<cr>
 
 " Map <space><space> to word search
-map <space><space> :execute "/\\<".input('w/')."\\>"<cr>
+nmap <space><space> :execute "/\\<".input('w/')."\\>"<cr>
 
 " For regular expressions turn magic on
 set magic
