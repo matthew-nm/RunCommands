@@ -52,6 +52,9 @@ nmap <leader>V :split<Enter>
 " New tab
 nmap <leader>t :tabnew<Enter>
 
+" Fold/unfold all
+nmap <leader>z zA
+
 " Turn off highlighting
 nmap <leader><space> :noh<Enter>
 
