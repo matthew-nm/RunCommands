@@ -139,6 +139,9 @@ let g:ale_sign_column_always = 1
 "let g:ale_change_sign_column_color = 1
 let g:airline#extensions#ale#enabled = 1
 
+" python
+let g:ale_python_flake8_options = '--ignore=E501'
+
 
 " ===== Python-Syntax ===== "
 
