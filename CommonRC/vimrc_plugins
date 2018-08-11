@@ -16,7 +16,6 @@ call plug#begin()
 
 " General
 Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
 Plug 'majutsushi/tagbar'
   " needs universal-ctags intalled
 Plug 'aufgang001/vim-nerdtree_plugin_open'
@@ -53,6 +52,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'plasticboy/vim-markdown'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'vim-python/python-syntax'
+
+" Conditionals
+if $POWERLINE == 1
+  Plug 'ryanoasis/vim-devicons'
+endif
 
 call plug#end()
 
