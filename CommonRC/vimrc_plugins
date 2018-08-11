@@ -25,6 +25,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 Plug 'brooth/far.vim'
 Plug 'w0rp/ale'
+  " needs linters installed
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'tmhedberg/SimpylFold'
 Plug 'konfekt/fastfold'
@@ -146,6 +147,9 @@ let g:ale_set_highlights = 0
 let g:ale_sign_column_always = 1
 "let g:ale_change_sign_column_color = 1
 let g:airline#extensions#ale#enabled = 1
+
+" python
+let g:ale_python_flake8_options = '--ignore=E501'
 
 
 " ===== Python-Syntax ===== "
