@@ -28,6 +28,7 @@ Plug 'w0rp/ale'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'tmhedberg/SimpylFold'
 Plug 'konfekt/fastfold'
+Plug 'ervandew/supertab'
 Plug 'vim-scripts/ShowTrailingWhitespace'
   " alternative: ntpeters/vim-better-whitespace
 
@@ -40,6 +41,9 @@ Plug 'shougo/deoplete.nvim'
   " needs neovim python package for python used by vim
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
+
+" Python
+Plug 'davidhalter/jedi-vim'
 
 " Unused?
 Plug 'tpope/vim-fugitive'
@@ -122,6 +126,11 @@ let g:deoplete#enable_at_startup = 0
 autocmd InsertEnter * call deoplete#enable()
 
 let g:python3_host_prog = expand('~/bin/python')
+
+
+" ===== supertab ===== "
+
+let g:SuperTabDefaultCompletionType = '<c-n>'
 
 
 " ===== SimpylFold ===== "
