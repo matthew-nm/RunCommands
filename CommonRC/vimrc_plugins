@@ -16,9 +16,9 @@ call plug#begin()
 
 " General
 Plug 'scrooloose/nerdtree'
+Plug 'aufgang001/vim-nerdtree_plugin_open'
 Plug 'majutsushi/tagbar'
   " needs universal-ctags intalled
-Plug 'aufgang001/vim-nerdtree_plugin_open'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
@@ -31,6 +31,7 @@ Plug 'konfekt/fastfold'
 Plug 'ervandew/supertab'
 Plug 'vim-scripts/ShowTrailingWhitespace'
   " alternative: ntpeters/vim-better-whitespace
+Plug 'airblade/vim-gitgutter'
 
 " Tmux
 Plug 'tpope/vim-tbone'
