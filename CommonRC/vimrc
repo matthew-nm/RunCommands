@@ -241,11 +241,12 @@ autocmd FileType json call ShowTrailingWhitespace#SetLocalExtraPattern(',\s$')
 
 " ===== COLORS ===== "
 
-highlight LineNr       term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
-highlight CursorLineNr term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
-highlight Statement    term=bold cterm=NONE ctermfg=Yellow ctermbg=NONE gui=NONE guifg=Yellow guibg=NONE
+highlight LineNr       term=bold cterm=NONE ctermfg=Yellow ctermbg=236 gui=NONE guifg=Yellow guibg=NONE
+highlight CursorLineNr term=bold cterm=NONE ctermfg=Yellow ctermbg=236 gui=NONE guifg=Yellow guibg=NONE
+highlight Statement    term=bold cterm=NONE ctermfg=Yellow ctermbg=236 gui=NONE guifg=Yellow guibg=NONE
 highlight CursorLine   ctermbg=236 cterm=none
 "highlight CursorColumn ctermbg=236
 highlight ColorColumn  ctermbg=236
 highlight Folded       ctermfg=209 ctermbg=234
-highlight SignColumn   ctermbg=None
+highlight SignColumn   ctermbg=236
+highlight VertSplit    ctermbg=028 ctermfg=236
