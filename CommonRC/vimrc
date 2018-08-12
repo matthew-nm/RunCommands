@@ -249,7 +249,7 @@ highlight CursorLine   ctermbg=236 cterm=none
 highlight ColorColumn  ctermbg=236
 highlight Folded       ctermfg=209 ctermbg=234
 highlight SignColumn   ctermbg=236
-highlight VertSplit    ctermbg=028 ctermfg=236
+highlight VertSplit    ctermbg=126 ctermfg=236
 
 " ale
 highlight ALEErrorSign   ctermbg=236 ctermfg=160
