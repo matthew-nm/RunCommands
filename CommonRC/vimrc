@@ -99,8 +99,8 @@ nnoremap j gj
 nnoremap k gk
 
 " Move to next lint error
-nmap <silent> <F1> :ALENextWrap<cr>
-nmap <silent> <F2> :ALEPreviousWrap<cr>
+map <silent> <F1> :ALENextWrap<cr>
+map <silent> <F2> :ALEPreviousWrap<cr>
 
 " Fix backspace
 set backspace=eol,start,indent
