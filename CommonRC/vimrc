@@ -223,7 +223,7 @@ augroup checktime
         autocmd BufEnter        * silent! checktime
         autocmd CursorHold      * silent! checktime
         autocmd CursorHoldI     * silent! checktime
-        "these two _may_ slow things down. Remove if they do.
+        "These two _may_ slow things down. Remove if they do.
         autocmd CursorMoved     * silent! checktime
         autocmd CursorMovedI    * silent! checktime
     endif
@@ -237,18 +237,18 @@ autocmd FileType json call ShowTrailingWhitespace#SetLocalExtraPattern(',\s$')
 
 " ===== COLORS ===== "
 
-highlight LineNr       term=bold cterm=NONE ctermfg=Yellow ctermbg=236 gui=NONE guifg=Yellow guibg=NONE
-highlight CursorLineNr term=bold cterm=NONE ctermfg=Yellow ctermbg=236 gui=NONE guifg=Yellow guibg=NONE
+highlight Statement    ctermfg=227
+highlight MatchParen   ctermfg=226 ctermbg=None
+highlight Folded       ctermfg=209 ctermbg=234
+
+highlight LineNr       ctermfg=220 ctermbg=236
+highlight CursorLineNr ctermfg=202 ctermbg=236
 highlight SignColumn   ctermbg=236
 highlight VertSplit    ctermbg=028 ctermfg=236
 
-highlight Statement    term=bold cterm=NONE ctermfg=Yellow ctermbg=236 gui=NONE guifg=Yellow guibg=NONE
-highlight CursorLine   ctermbg=236 cterm=none
-"highlight CursorColumn ctermbg=236
+highlight CursorLine   ctermbg=236 cterm=None
+highlight CursorColumn ctermbg=236
 highlight ColorColumn  ctermbg=236
-
-highlight MatchParen   ctermfg=226 ctermbg=None
-highlight Folded       ctermfg=209 ctermbg=234
 
 " ale
 highlight ALEErrorSign   ctermbg=236 ctermfg=160
