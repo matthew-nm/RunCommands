@@ -245,7 +245,7 @@ autocmd FileType json call ShowTrailingWhitespace#SetLocalExtraPattern(',\s$')
 
 highlight Statement    ctermfg=227
 highlight MatchParen   ctermfg=226 ctermbg=None
-highlight Folded       ctermfg=209 ctermbg=234
+highlight Folded       ctermfg=209 ctermbg=None
 
 highlight LineNr       ctermfg=178 ctermbg=236
 highlight CursorLineNr ctermfg=166 ctermbg=236
