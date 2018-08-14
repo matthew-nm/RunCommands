@@ -143,6 +143,12 @@ command! ReplaceWordUnderCursor
   \ :execute "?\\<".b:bar."\\>"                         |
   \ call winrestview(b:bufview)
 
+" IDE mode
+command! IDE
+  \ call deoplete#enable()
+command! NoIDE
+  \ call deoplete#disable()
+
 
 " ===== CONTROL / SEARCH ===== "
 

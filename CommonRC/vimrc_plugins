@@ -128,10 +128,16 @@ let vim_markdown_preview_hotkey = '<C-m>'
 
 " ===== deoplete ===== "
 
+" Disable automatic completions
 let g:deoplete#enable_at_startup = 0
-autocmd InsertEnter * call deoplete#enable()
 
 let g:python3_host_prog = expand('~/bin/python')
+
+
+" ===== jedi-vim ===== "
+
+" Disable automatic package completions
+let g:jedi#popup_on_dot = 0
 
 
 " ===== supertab ===== "
