@@ -132,7 +132,8 @@ command! CleanWhitespace
   \ let b:bufview=winsaveview() |
   \ :%s/\s\+$//g                |
   \ :execute "normal \<C-O>"    |
-  \ call winrestview(b:bufview)
+  \ call winrestview(b:bufview) |
+  \ :noh
 
 " Replace all instances of word under cursor
 command! ReplaceWordUnderCursor
