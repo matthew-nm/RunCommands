@@ -251,7 +251,7 @@ highlight CursorColumn ctermbg=236
 highlight ColorColumn  ctermbg=236
 
 "highlight TabLine      ctermfg= ctermbg=
-highlight TabLineSel   ctermfg=white ctermbg=black
+highlight TabLineSel   ctermfg=015 ctermbg=000
 highlight TabLineFill  ctermfg=236
 
 " ale (linter engine)
