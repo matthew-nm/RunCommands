@@ -31,7 +31,7 @@ alias logg='log --graph --decorate --all'
 # ===== Functions ===== #
 
 function proc() {
-  ps aux | grep -v 'grep --color=' | grep $1
+  ps aux | grep $1 --color=always | grep -v "grep.\+$1"
 }
 
 function ar() {
