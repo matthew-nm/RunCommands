@@ -1,7 +1,7 @@
 " source /blah/blah/vimrc_plugins
 
 
-" ===== PLUGINS via `vim-plug` ===== "
+" ----- PLUGINS via `vim-plug` ----- "
 
 " run `vim-plug` in terminal to install manager
 
@@ -17,42 +17,53 @@ call plug#begin()
 " General
 Plug 'scrooloose/nerdtree'
 Plug 'aufgang001/vim-nerdtree_plugin_open'
-Plug 'majutsushi/tagbar'
-  " needs universal-ctags intalled
+Plug 'majutsushi/tagbar' "needs universal-ctags intalled
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'kien/ctrlp.vim'
-Plug 'brooth/far.vim'
-Plug 'w0rp/ale'
-  " needs linters installed
-Plug 'JamshedVesuna/vim-markdown-preview'
-Plug 'tmhedberg/SimpylFold'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'brooth/far.vim' "(find and replace)
 Plug 'konfekt/fastfold'
 Plug 'ervandew/supertab'
 Plug 'vim-scripts/ShowTrailingWhitespace'
-  " alternative: ntpeters/vim-better-whitespace
 Plug 'airblade/vim-gitgutter'
+Plug 'w0rp/ale' "(linter engine) needs linters installed in PATH
+Plug 'godlygeek/tabular'
+Plug 'tomtom/tcomment_vim'
+Plug 'vim-scripts/YankRing.vim'
+Plug 'mbbill/undotree'
+Plug 'kien/tabman.vim'
+
+" Unused?
+Plug 'tpope/vim-fugitive'
 
 " Tmux
 Plug 'tpope/vim-tbone'
 Plug 'christoomey/vim-tmux-navigator'
 
-" Autocomplete
-Plug 'shougo/deoplete.nvim'
-  " needs neovim python package for python used by vim
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
+" deoplete (autocomplete engine)
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+  " also needs neovim installed
 
 " Python
-Plug 'davidhalter/jedi-vim'
-
-" Unused?
-Plug 'tpope/vim-fugitive'
-
-" Syntax
-Plug 'plasticboy/vim-markdown'
-Plug 'neovimhaskell/haskell-vim'
 Plug 'vim-python/python-syntax'
+Plug 'tmhedberg/SimpylFold'
+Plug 'davidhalter/jedi-vim'
+Plug 'zchee/deoplete-jedi'
+
+" Haskell
+Plug 'neovimhaskell/haskell-vim'
+
+" Markdown
+Plug 'plasticboy/vim-markdown'
+Plug 'JamshedVesuna/vim-markdown-preview'
+
 
 " Conditionals
 if $POWERLINE == 1
@@ -62,15 +73,14 @@ endif
 call plug#end()
 
 
-" ========================== "
-" ===== CONFIGURATIONS ===== "
-" ========================== "
+" -------------------------- "
+" ----- CONFIGURATIONS ----- "
+" -------------------------- "
 
-" ===== Vim Airline ===== "
+" ----- Vim Airline ----- "
 
 " Set theme
 let g:airline_theme='angr'
-set noshowmode
 
 " Use powerline fonts if supported
 if $POWERLINE == 1
@@ -87,7 +97,7 @@ silent! call airline#extensions#whitespace#disable()
 let g:airline_section_warning = airline#section#create(['ycm_warning_count','syntastic-warn'])
 
 
-" ===== NERDTree ===== "
+" ----- NERDTree ----- "
 
 " Show hidden files by default
 let NERDTreeShowHidden = 1
@@ -106,53 +116,52 @@ let g:NERDTreeMapJumpNextSibling = '<Nop>'
 let g:NERDTreeMapJumpPrevSibling = '<Nop>'
 
 
-" ===== CtrlP ===== "
+" ----- tabular ----- "
 
-" Prioritize filename matches
-"let g:ctrlp_by_filename = 1
+" Call on every | entry
+inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+function! s:align()
+  let p = '^\s*|\s.*\s|\s*$'
+  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+    Tabularize/|/l1
+    normal! 0
+    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+  endif
+endfunction
 
-" Show dotfiles
-let g:ctrlp_show_hidden = 1
 
-" Don't use caching
-"let g:ctrlp_use_caching = 0
-
-" Allow multiple buffers of same file
-let g:ctrlp_switch_buffer = 0
-
-
-" ===== Markdown Preview ===== '
+" ----- Markdown Preview ----- '
 
 let vim_markdown_preview_hotkey = '<C-m>'
 
 
-" ===== deoplete ===== "
+" ----- deoplete ----- "
 
 " Disable automatic completions
 let g:deoplete#enable_at_startup = 0
 
-let g:python3_host_prog = expand('~/bin/python')
 
-
-" ===== jedi-vim ===== "
+" ----- jedi-vim ----- "
 
 " Disable automatic package completions
 let g:jedi#popup_on_dot = 0
 
 
-" ===== supertab ===== "
+" ----- supertab ----- "
 
 let g:SuperTabDefaultCompletionType = '<c-n>'
 
 
-" ===== SimpylFold ===== "
+" ----- SimpylFold ----- "
 
 let g:SimpylFold_fold_import = 0
 let g:SimpylFold_fold_docstring = 0
 let g:SimpylFold_docstring_preview = 1
 
 
-" ===== ale (linter) ===== "
+" ----- ale (linter) ----- "
 
 let g:ale_set_highlights = 0
 let g:ale_sign_column_always = 1
@@ -163,7 +172,12 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_python_flake8_options = '--ignore=E201,E202,E222,E226,E303,E266,E501'
 
 
-" ===== Python-Syntax ===== "
+" ----- undotree ----- "
+
+nnoremap <F5> :UndotreeToggle<cr>
+
+
+" ----- Python-Syntax ----- "
 
 let g:python_highlight_all = 1
 
@@ -171,5 +185,4 @@ let g:python_highlight_all = 1
 "
 "
 " Random cleanup...
-"filetype plugin off  " leave 'on' for folding plugins
 filetype indent off

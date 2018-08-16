@@ -1,33 +1,47 @@
 " source /blah/blah/vimrc
 
-
-" ===== VISUAL ===== "
-
-" Turn on numbers
-set number
-
-" Turn on search highlighting
-set hlsearch
-
-" Always show current position
-set ruler
-
-" Set line highlighting
-set cursorline
-"set cursorcolumn
-
-" Set long line marker
+set background=dark
+set nocompatible
 "set colorcolumn=85
-
-" Don't redraw while executing macros (performance config)
+"set cursorcolumn
+set cursorline
+set foldlevelstart=10
+set hid  "hide buffers when abandoned
+set hlsearch
 set lazyredraw
+set magic
+set mouse+=a
+set ttymouse=xterm2
+set number
+set ruler
+set scrolloff=7
+set noshowmode
+set term=xterm-256color
+set undodir=~/.undodir/
+set undofile
+
+" Search options
+set smartcase
+set hlsearch
+set incsearch  "search as you type
+
+" Set tab length to (2) / convert to spaces
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+
+" Fix backspace
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
 
 " Redraw syntax highlighting w/ <F12> (in case of errors)
 noremap <F12> <Esc>:syntax sync fromstart<CR>
 inoremap <F12> <C-o>:syntax sync fromstart<CR>
 
 
-" ===== <LEADER> ===== "
+" ----- <LEADER> ----- "
 
 " Remap <leader> key
 let mapleader = ","
@@ -66,6 +80,18 @@ nmap <leader>e :NERDTreeToggle<cr>
 " Toggle tagbar
 nmap <leader>E :TagbarToggle<cr>
 
+" fzf (fuzzy file finder)
+map <leader>f :Files<cr>
+
+" Tabularize
+nmap <Leader>a= :Tabularize /=<cr>
+vmap <Leader>a= :Tabularize /=<cr>
+nmap <Leader>a<bar> :Tabularize /<bar><cr>
+vmap <Leader>a<bar> :Tabularize /<bar><cr>
+
+" Yankring, show
+nmap <leader>p :YRShow<cr>
+
 " Close all hidden buffers
 nmap <leader>c :call CloseHiddenBuffers()<Enter>
 
@@ -79,20 +105,8 @@ nmap <leader>R :Fardo<Enter>
 " Replace all instances of word under cusor
 nmap <leader>s :ReplaceWordUnderCursor<cr>
 
-" Set toggle spell check w/ <leader>ss
-map <leader>ss :setlocal spell!<cr>
 
-" Spell check shortcuts
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
-
-
-" ===== EDITING / MOVEMENT ===== "
-
-" Basic
-set nocompatible
+" ----- EDITING / MOVEMENT ----- "
 
 " Set up/down to work with wrapped lines
 nnoremap j gj
@@ -101,19 +115,6 @@ nnoremap k gk
 " Move to next lint error
 map <silent> <F1> :ALENextWrap<cr>
 map <silent> <F2> :ALEPreviousWrap<cr>
-
-" Fix backspace
-set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
-
-" Disable auto comment insertion
-autocmd FileType * setlocal fo-=c fo-=r fo-=o
-
-" Set tab length to (2) AND convert to spaces
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set expandtab
 
 " Bind system clipboard
 vnoremap <C-c> "+y
@@ -150,21 +151,16 @@ command! IDE
 command! NoIDE
   \ call deoplete#disable()
 
+" <CR>: close popup and save indent
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+  " For no inserting <CR> key.
+  "return pumvisible() ? "\<C-y>" : "\<CR>"
+endfunction
 
-" ===== CONTROL / SEARCH ===== "
 
-" Turn on mouse stuff
-set mouse+=a
-"if &term =~ '^screen'
-    " tmux knows the extended mouse mode
-    set ttymouse=xterm2
-"endif
-
-" Set scroll offset (buffer around cursor)
-set scrolloff=7
-
-" Set folding options
-set foldlevelstart=10
+" ----- CONTROL / SEARCH ----- "
 
 " Change tmux windows w/ Ctrl+h/j/k/l -or- Ctrl+<ArrowKeys>
 let g:tmux_navigator_no_mappings = 1
@@ -184,19 +180,8 @@ nmap <space> :execute "/\\c".input('i/')<cr>
 " Map <space><space> to word search
 nmap <space><space> :execute "/\\<".input('w/')."\\>"<cr>
 
-" For regular expressions turn magic on
-set magic
 
-" Search options
-set smartcase
-set hlsearch
-set incsearch  "search as you type
-
-
-" ===== BUFFERS / FILES ===== "
-
-" A buffer becomes hidden when it is abandoned
-set hid
+" ----- BUFFERS / FILES ----- "
 
 " Write all buffers before navigating from vim to tmux pane
 let g:tmux_navigator_save_on_switch = 2
@@ -237,19 +222,27 @@ augroup checktime
 augroup END
 
 
-" ===== FILETYPE SPECIFIC ===== "
+" ----- FILETYPE SPECIFIC ----- "
+
+" Disable auto comment insertion
+autocmd FileType * setlocal fo-=c fo-=r fo-=o
 
 autocmd FileType json call ShowTrailingWhitespace#SetLocalExtraPattern(',\s$')
 
+" ----- SYSTEM ----- "
 
-" ===== COLORS ===== "
+" neovim interpreter
+let g:python3_host_prog = expand('~/bin/python')
+
+
+" ----- COLORS ----- "
 
 highlight Statement    ctermfg=227
 highlight MatchParen   ctermfg=226 ctermbg=None
 highlight Folded       ctermfg=209 ctermbg=None
 
-highlight LineNr       ctermfg=178 ctermbg=236
-highlight CursorLineNr ctermfg=166 ctermbg=236
+highlight LineNr       ctermfg=252 ctermbg=236
+highlight CursorLineNr ctermfg=171 ctermbg=236
 highlight SignColumn   ctermbg=236
 highlight VertSplit    ctermbg=240 ctermfg=236
 
@@ -257,6 +250,10 @@ highlight CursorLine   ctermbg=236 cterm=None
 highlight CursorColumn ctermbg=236
 highlight ColorColumn  ctermbg=236
 
-" ale
+"highlight TabLine      ctermfg= ctermbg=
+highlight TabLineSel   ctermfg=white ctermbg=black
+highlight TabLineFill  ctermfg=236
+
+" ale (linter engine)
 highlight ALEErrorSign   ctermbg=236 ctermfg=160
 highlight ALEWarningSign ctermbg=236 ctermfg=178
