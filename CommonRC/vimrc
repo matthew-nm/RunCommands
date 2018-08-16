@@ -51,28 +51,28 @@ let g:mapleader = ","
 nmap <leader>w :w<cr>
 
 " Quit
-nmap <leader>q :qa<Enter>
+nmap <leader>q :qa<cr>
 
 " V-split
-nmap <leader>v :vsplit<Enter>
+nmap <leader>v :vsplit<cr>
 
 " H-split
-nmap <leader>V :split<Enter>
+nmap <leader>V :split<cr>
 
 " New tab
-nmap <leader>t :tabnew<Enter>
+nmap <leader>t :tabnew<cr>
 
 " Fold/unfold all
 nmap <leader>z zA
 
 " Turn off highlighting
-nmap <leader><space> :noh<Enter>
+nmap <leader><space> :noh<cr>
 
 " Hide buffer
-nmap <leader>h :hide<Enter>
+nmap <leader>h :hide<cr>
 
 " Delete buffer
-nmap <leader>d :bd<Enter>
+nmap <leader>d :bd<cr>
 
 " Toggle NERDTree
 nmap <leader>e :NERDTreeToggle<cr>
@@ -93,14 +93,14 @@ vmap <Leader>a<bar> :Tabularize /<bar><cr>
 nmap <leader>p :YRShow<cr>
 
 " Close all hidden buffers
-nmap <leader>c :call CloseHiddenBuffers()<Enter>
+nmap <leader>c :call CloseHiddenBuffers()<cr>
 
 " Close all buffers (then, reopen NERDTree)
-nmap <leader>C :%bd \| NERDTreeToggle<Enter>
+nmap <leader>C :%bd \| NERDTreeToggle<cr>
 
 " Far.vim replace
-nmap <leader>r :Farp<Enter>
-nmap <leader>R :Fardo<Enter>
+nmap <leader>r :Farp<cr>
+nmap <leader>R :Fardo<cr>
 
 " Replace all instances of word under cusor
 nmap <leader>s :ReplaceWordUnderCursor<cr>
