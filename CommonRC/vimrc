@@ -37,8 +37,8 @@ set whichwrap+=<,>,h,l
 
 
 " Redraw syntax highlighting w/ <F12> (in case of errors)
-noremap <F12> <Esc>:syntax sync fromstart<CR>
-inoremap <F12> <C-o>:syntax sync fromstart<CR>
+noremap <F12> <Esc>:syntax sync fromstart<CR> \| :GitGutter<cr>
+inoremap <F12> <C-o>:syntax sync fromstart<CR> \| :GitGutter<cr>
 
 
 " ----- <LEADER> ----- "
