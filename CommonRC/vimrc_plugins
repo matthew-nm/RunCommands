@@ -180,6 +180,12 @@ let g:ale_python_flake8_options = '--ignore=E201,E202,E222,E226,E303,E266,E501'
 nnoremap <F5> :UndotreeToggle<cr>
 
 
+" ----- ShowTrailingWhitespace ----- "
+
+" Disable on certain buffers
+autocmd BufEnter FAR* :call ShowTrailingWhitespace#Set(0,0)
+
+
 " ----- Python-Syntax ----- "
 
 let g:python_highlight_all = 1
