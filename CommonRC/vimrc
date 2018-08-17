@@ -37,8 +37,8 @@ set whichwrap+=<,>,h,l
 
 
 " Redraw syntax highlighting w/ <F12> (in case of errors)
-noremap <F12> <Esc>:syntax sync fromstart<CR> \| :GitGutter<cr>
-inoremap <F12> <C-o>:syntax sync fromstart<CR> \| :GitGutter<cr>
+noremap <F12> <Esc>:syntax sync fromstart<cr> \| :GitGutter<cr>
+inoremap <F12> <C-o>:syntax sync fromstart<cr> \| :GitGutter<cr>
 
 
 " ----- <LEADER> ----- "
@@ -175,10 +175,12 @@ nnoremap <silent> <C-l>     :TmuxNavigateRight<cr>
 nnoremap <silent> <C-\>     :TmuxNavigatePrevious<cr>
 
 " Map <space> to insensitive search
-nmap <space> :execute "/\\c".input('i/')<cr>
+nmap <space> /\c
+"nmap <space> :execute "/\\c".input('i/')<cr>
 
 " Map <space><space> to word search
-nmap <space><space> :execute "/\\<".input('w/')."\\>"<cr>
+nmap <space><space> /\<\><Left><Left>
+"nmap <space><space> :execute "/\\<".input('w/')."\\>"<cr>
 
 
 " ----- BUFFERS / FILES ----- "
