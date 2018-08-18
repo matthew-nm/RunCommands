@@ -14,7 +14,7 @@ set magic
 set mouse+=a
 set ttymouse=xterm2
 set number
-set pastetoggle=<F2>
+set pastetoggle=<F3>
 set ruler
 set scrolloff=7
 set showcmd
@@ -123,7 +123,7 @@ inoremap jj <esc>
 
 " Move to next lint error
 map <silent> <F1> :ALENextWrap<cr>
-map <silent> <S-F1> :ALEPreviousWrap<cr>
+map <silent> <F2> :ALEPreviousWrap<cr>
 
 " Bind system clipboard
 vnoremap <C-c> "+y
@@ -136,7 +136,7 @@ vnoremap ty :Tyank<cr>
 nmap zz :set foldlevel=1<cr>
 
 " Rainbow parentheses
-nmap R :RainbowToggle<cr>
+nmap ;R :RainbowToggle<cr>
 
 " Sudo Save
 "   To use this command, type :Sudow
