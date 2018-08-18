@@ -65,6 +65,9 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'JamshedVesuna/vim-markdown-preview'
 
+" Rockstar
+Plug 'sirosen/vim-rockstar'
+
 
 " Conditionals
 if $POWERLINE == 1
