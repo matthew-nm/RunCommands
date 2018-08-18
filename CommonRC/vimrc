@@ -242,6 +242,12 @@ augroup checktime
 augroup END
 
 
+" ----- EDITING ENVIRONMENT ----- "
+
+command! Changes
+  \ :!git commit -am "Changes." && git push github<cr>
+
+
 " ----- FILETYPE SPECIFIC ----- "
 
 " Disable auto comment insertion
