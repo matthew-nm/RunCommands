@@ -42,6 +42,7 @@ Plug 'tpope/vim-tbone'
 Plug 'christoomey/vim-tmux-navigator'
 
 " deoplete (autocomplete engine)
+" (needs neovim python package installed)
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -49,7 +50,6 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
-  " also needs neovim installed
 
 " Python
 Plug 'vim-python/python-syntax'
