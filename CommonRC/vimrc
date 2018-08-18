@@ -245,7 +245,7 @@ augroup END
 " ----- EDITING ENVIRONMENT ----- "
 
 command! Changes
-  \ :!git commit -am "Changes." && git push github<cr>
+  \ :!git commit -am "Changes." && git push github
 
 
 " ----- FILETYPE SPECIFIC ----- "
