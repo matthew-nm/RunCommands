@@ -5,6 +5,7 @@ set nocompatible
 "set colorcolumn=85
 "set cursorcolumn
 set cursorline
+set encoding=utf-8
 set foldlevelstart=9
 set hid  "hide buffers when abandoned
 set hlsearch
@@ -13,15 +14,20 @@ set magic
 set mouse+=a
 set ttymouse=xterm2
 set number
+set pastetoggle=<F2>
 set ruler
 set scrolloff=7
+set showcmd
 set noshowmode
 set term=xterm-256color
+set ttyfast
 set undodir=~/.undodir/
 set undofile
+set visualbell
+set wildmenu
+set wildmode=list:longest
 
 " Search options
-set smartcase
 set hlsearch
 set incsearch  "search as you type
 
@@ -112,9 +118,12 @@ nmap <leader>s :ReplaceWordUnderCursor<cr>
 nnoremap j gj
 nnoremap k gk
 
+" Set jj to exit insert mode
+inoremap jj <esc>
+
 " Move to next lint error
 map <silent> <F1> :ALENextWrap<cr>
-map <silent> <F2> :ALEPreviousWrap<cr>
+map <silent> <S-F1> :ALEPreviousWrap<cr>
 
 " Bind system clipboard
 vnoremap <C-c> "+y
@@ -125,6 +134,9 @@ vnoremap ty :Tyank<cr>
 
 " Fold level 1
 nmap zz :set foldlevel=1<cr>
+
+" Rainbow parentheses
+nmap R :RainbowToggle<cr>
 
 " Sudo Save
 "   To use this command, type :Sudow
@@ -188,6 +200,9 @@ nmap <space><space> /\<\><Left><Left>
 
 " ----- BUFFERS / FILES ----- "
 
+" Save on losing focus
+au FocusLost * :wa
+
 " Write all buffers before navigating from vim to tmux pane
 let g:tmux_navigator_save_on_switch = 2
 
@@ -243,7 +258,8 @@ let g:python3_host_prog = expand('~/bin/python')
 " ----- COLORS ----- "
 
 highlight Statement    ctermfg=227
-highlight MatchParen   ctermfg=226 ctermbg=None
+highlight MatchParen   ctermfg=None ctermbg=None
+"highlight MatchParen   ctermfg=226 ctermbg=None
 highlight Folded       ctermfg=209 ctermbg=None
 
 highlight LineNr       ctermfg=252 ctermbg=236

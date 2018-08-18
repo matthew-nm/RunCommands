@@ -33,6 +33,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'mbbill/undotree'
 Plug 'kien/tabman.vim'
+Plug 'luochen1990/rainbow'
 
 " Unused?
 Plug 'tpope/vim-fugitive'
@@ -220,6 +221,10 @@ nnoremap <F5> :UndotreeToggle<cr>
 
 " Disable on certain buffers
 autocmd BufEnter FAR* :call ShowTrailingWhitespace#Set(0,0)
+
+" ----- rainbow ----- "
+
+let g:rainbow_active = 1
 
 
 " ----- Python-Syntax ----- "
