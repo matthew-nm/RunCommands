@@ -249,6 +249,7 @@ autocmd FileType * setlocal fo-=c fo-=r fo-=o
 
 autocmd FileType json call ShowTrailingWhitespace#SetLocalExtraPattern(',\s$')
 
+
 " ----- SYSTEM ----- "
 
 " neovim interpreter
