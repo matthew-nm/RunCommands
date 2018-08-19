@@ -86,6 +86,9 @@ nmap <leader>e :NERDTreeToggle<cr>
 " Toggle tagbar
 nmap <leader>E :TagbarToggle<cr>
 
+" Toggle tabman
+let g:tabman_toggle = '<leader>T'
+
 " fzf (fuzzy file finder)
 map <leader>f :Files<cr>
 
