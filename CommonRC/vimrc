@@ -135,7 +135,7 @@ nnoremap ty :Tyank<cr>
 vnoremap ty :Tyank<cr>
 
 " Fold level 1
-nmap zz :set foldlevel=1<cr>
+nmap z1 :set foldlevel=1<cr>
 
 " Rainbow parentheses
 nmap ;R :RainbowToggle<cr>
