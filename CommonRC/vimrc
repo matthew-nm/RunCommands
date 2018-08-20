@@ -255,6 +255,7 @@ command! Changes
 " Disable auto comment insertion
 autocmd FileType * setlocal fo-=c fo-=r fo-=o
 
+autocmd FileType text set linebreak
 autocmd FileType json call ShowTrailingWhitespace#SetLocalExtraPattern(',\s$')
 
 
