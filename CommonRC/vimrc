@@ -23,7 +23,6 @@ set term=xterm-256color
 set ttyfast
 set undodir=~/.undodir/
 set undofile
-set visualbell
 set wildmenu
 set wildmode=list:longest
 
