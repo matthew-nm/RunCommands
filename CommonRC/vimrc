@@ -2,7 +2,7 @@
 
 " Theme
 set background=dark
-colorscheme molokai
+"colorscheme molokai
 "let ayucolor='dark'
 let g:airline_theme='distinguished'
 "set termguicolors
@@ -274,7 +274,7 @@ let g:python3_host_prog = expand('~/bin/python')
 
 " ----- COLORS ----- "
 
-"highlight Statement    ctermfg=227
+highlight Statement    ctermfg=227
 highlight Comment      ctermfg=244
 highlight Folded       ctermfg=209 ctermbg=NONE
 
