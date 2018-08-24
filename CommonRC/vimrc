@@ -87,10 +87,10 @@ nmap <leader>h :hide<cr>
 nmap <leader>d :bd<cr>
 
 " Toggle NERDTree
-nmap <leader>e :NERDTreeToggle<cr>
+nmap <silent> <leader>e :NERDTreeToggle<cr>
 
 " Toggle tagbar
-nmap <leader>E :TagbarToggle<cr>
+nmap <silent> <leader>E :TagbarToggle<cr>
 
 " Toggle tabman
 let g:tabman_toggle = '<leader>T'
@@ -111,7 +111,7 @@ nmap <leader>p :YRShow<cr>
 nmap <leader>c :call CloseHiddenBuffers()<cr>
 
 " Close all buffers (then, reopen NERDTree)
-nmap <leader>C :%bd \| NERDTreeToggle<cr>
+nmap <silent> <leader>C :%bd \| NERDTreeToggle<cr>
 
 " Far.vim replace
 nmap <leader>r :Farp<cr>
@@ -254,7 +254,7 @@ augroup END
 " ----- EDITING ENVIRONMENT ----- "
 
 command! Changes
-  \ :!git commit -am "Changes." && git push github
+  \ :silent !git commit -am "Changes." && git push github
 
 
 " ----- FILETYPE SPECIFIC ----- "
