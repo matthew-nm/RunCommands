@@ -35,6 +35,10 @@ Plug 'mbbill/undotree'
 Plug 'kien/tabman.vim'
 Plug 'luochen1990/rainbow'
 
+" Themes
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'ayu-theme/ayu-vim'
+
 " Unused?
 Plug 'tpope/vim-fugitive'
 
@@ -82,9 +86,6 @@ call plug#end()
 " -------------------------- "
 
 " ----- Vim Airline ----- "
-
-" Set theme
-let g:airline_theme='angr'
 
 " Use powerline fonts if supported
 if $POWERLINE == 1

@@ -1,6 +1,13 @@
 " source /blah/blah/vimrc
 
+" Theme
+"colorscheme ayu
+"let ayucolor='dark'
+let g:airline_theme='angr'
 set background=dark
+"set termguicolors
+
+" General
 set nocompatible
 "set colorcolumn=85
 "set cursorcolumn
@@ -267,17 +274,19 @@ let g:python3_host_prog = expand('~/bin/python')
 
 " ----- COLORS ----- "
 
-highlight Statement    ctermfg=227
-highlight MatchParen   ctermfg=None ctermbg=None
-"highlight MatchParen   ctermfg=226 ctermbg=None
-highlight Folded       ctermfg=209 ctermbg=None
+"highlight Statement    ctermfg=227
+highlight Comment      ctermfg=247
+highlight Folded       ctermfg=209 ctermbg=NONE
+
+highlight MatchParen   ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE
+"highlight MatchParen   ctermfg=226 ctermbg=NONE
 
 highlight LineNr       ctermfg=252 ctermbg=235
 highlight CursorLineNr ctermfg=171 ctermbg=235
 highlight SignColumn   ctermbg=235
 highlight VertSplit    ctermbg=240 ctermfg=235
 
-highlight CursorLine   ctermbg=235 cterm=None
+highlight CursorLine   ctermbg=235 cterm=NONE
 highlight CursorColumn ctermbg=235
 highlight ColorColumn  ctermbg=235
 
