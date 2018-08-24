@@ -1,10 +1,10 @@
 " source /blah/blah/vimrc
 
 " Theme
+set background=dark
 colorscheme molokai
 "let ayucolor='dark'
-let g:airline_theme='ravenpower'
-set background=dark
+let g:airline_theme='distinguished'
 "set termguicolors
 
 " General
@@ -275,7 +275,7 @@ let g:python3_host_prog = expand('~/bin/python')
 " ----- COLORS ----- "
 
 "highlight Statement    ctermfg=227
-highlight Comment      ctermfg=242
+highlight Comment      ctermfg=244
 highlight Folded       ctermfg=209 ctermbg=NONE
 
 highlight MatchParen   ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE
