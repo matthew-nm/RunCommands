@@ -85,6 +85,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # History settings
+setopt HIST_IGNORE_DUPS
 HISTFILE=~/.zsh_history
 SAVEHIST=1000
 
