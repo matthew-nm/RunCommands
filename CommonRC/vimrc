@@ -8,6 +8,7 @@ let g:airline_theme='distinguished'
 "set termguicolors
 
 " General
+set autoindent
 set nocompatible
 "set colorcolumn=85
 "set cursorcolumn
