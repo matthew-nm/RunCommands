@@ -266,7 +266,10 @@ command! Changes
 " Disable auto comment insertion
 autocmd FileType * setlocal fo-=c fo-=r fo-=o
 
-autocmd FileType text set linebreak
+" Don't wrap mid-word (for text files)
+autocmd FileType text,markdown set linebreak
+
+" Other...
 autocmd FileType json call ShowTrailingWhitespace#SetLocalExtraPattern(',\s$')
 
 
