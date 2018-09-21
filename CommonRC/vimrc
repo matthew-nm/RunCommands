@@ -13,6 +13,7 @@ set nocompatible
 "set colorcolumn=85
 "set cursorcolumn
 set cursorline
+set display+=lastline
 set encoding=utf-8
 set foldlevelstart=9
 set hid  "hide buffers when abandoned
