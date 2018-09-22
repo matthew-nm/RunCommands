@@ -9,8 +9,6 @@ alias installtar='tar -zxvf'
 alias sshserv='sudo rcsshd restart'
 alias cycleplasma='kquitapp5 plasmashell && kstart plasmashell'
 alias color256='for code ({000..255}) print -P -- "$code: %F{$code}\u2588\u2588\u2588\u2588 These are colors!%f"'
-alias vcsoff='export VCS_OFF=1; zsh'
-alias vcson='export VCS_OFF=0; zsh'
 alias vcs='vcson'
 
 alias o="kde-open"
@@ -47,6 +45,17 @@ function rename() {
 
 function unname() {
   echo -ne "\033]30;$(pwd|rev|cut -d / -f1|rev) : zsh\007"
+}
+
+function vcsoff() {
+  POWERLEVEL9K_LEFT_PROMPT_ELEMENTS_BACKUP=("${POWERLEVEL9K_LEFT_PROMPT_ELEMENTS[@]}")
+  POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=($(echo $POWERLEVEL9K_LEFT_PROMPT_ELEMENTS | sed -r 's/(\s|^)vcs(\s|$)/ /'))
+}
+
+function vcson() {
+  if [[ "$POWERLEVEL9K_LEFT_PROMPT_ELEMENTS_BACKUP" != ""  ]]; then
+    POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=("${POWERLEVEL9K_LEFT_PROMPT_ELEMENTS_BACKUP[@]}")
+  fi
 }
 
 function vim-plug() {
