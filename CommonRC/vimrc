@@ -126,11 +126,11 @@ nmap <leader>s :ReplaceWordUnderCursor<cr>
 " ----- EDITING / MOVEMENT ----- "
 
 " Set up/down to work with wrapped lines
-nnoremap j gj
 nnoremap k gk
+nnoremap j gj
 " And because I'm sloppy...
-nnoremap J gj
 nnoremap K gk
+nnoremap J gj
 
 " Set jj to exit insert mode
 inoremap jj <esc>
