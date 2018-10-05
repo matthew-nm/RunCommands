@@ -1,11 +1,20 @@
 " source /blah/blah/vimrc
 
 " Theme
+" set termguicolors
 set background=dark
-"colorscheme molokai
-"let ayucolor='dark'
+" colorscheme molokayo
+" colorscheme abstract
+" colorscheme challenger_deep
+" colorscheme lucid
+" colorscheme tender
+" let ayucolor='dark'
+" colorscheme ayu
 let g:airline_theme='distinguished'
-"set termguicolors
+" fixes
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set t_Co=256
 
 " General
 set autoindent

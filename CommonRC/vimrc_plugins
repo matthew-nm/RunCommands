@@ -19,12 +19,11 @@ Plug 'scrooloose/nerdtree'
 Plug 'aufgang001/vim-nerdtree_plugin_open'
 Plug 'majutsushi/tagbar' "needs universal-ctags intalled
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'brooth/far.vim' "(find and replace)
 Plug 'konfekt/fastfold'
-Plug 'ervandew/supertab'
+" Plug 'ervandew/supertab'
 Plug 'vim-scripts/ShowTrailingWhitespace'
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale' "(linter engine) needs linters installed in PATH
@@ -36,8 +35,9 @@ Plug 'kien/tabman.vim'
 Plug 'luochen1990/rainbow'
 
 " Themes
-Plug 'rafi/awesome-vim-colorschemes'
 Plug 'ayu-theme/ayu-vim'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'vim-airline/vim-airline-themes'
 
 " Unused?
 Plug 'tpope/vim-fugitive'
@@ -234,6 +234,10 @@ autocmd BufEnter FAR* :call ShowTrailingWhitespace#Set(0,0)
 " ----- rainbow ----- "
 
 let g:rainbow_active = 1
+let g:rainbow_conf = {
+	\	'guifgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+	\	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+	\}
 
 
 " ----- Python-Syntax ----- "
