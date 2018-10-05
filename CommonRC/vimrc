@@ -268,7 +268,7 @@ augroup END
 " ----- EDITING ENVIRONMENT ----- "
 
 command! Changes
-  \ :silent !git commit -am "Changes." && git push github
+  \ :!git commit -am "Changes." && git push github
 
 
 " ----- FILETYPE SPECIFIC ----- "
