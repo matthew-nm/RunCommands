@@ -1,0 +1,16 @@
+session_name: project
+windows:
+  - window_name: Git
+    layout: even-horizontal
+    panes:
+    - shell_command:
+      - tmux rename-session ${PWD##*/}
+      - clear
+      - git status
+    - shell_command:
+      - tmux select-pane -t 1
+      - watch -ct -n4 git log --graph --decorate --all --color=always
+  - window_name: Edit
+    panes:
+    - shell_command:
+      - vim -c "NERDTreeToggle"

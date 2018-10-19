@@ -22,7 +22,7 @@ alias capson="setxkbmap -layout us -option"
 
 # Dev tools
 alias a='tmux a -t'
-alias tp='tmuxp load project'
+alias tp='tmuxp load tmuxp'
 alias git='git '
 alias logg='log --graph --decorate --all'
 
