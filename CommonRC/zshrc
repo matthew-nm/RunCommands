@@ -25,6 +25,7 @@ alias a='tmux a -t'
 alias tp='tmuxp load tmuxp'
 alias git='git '
 alias logg='log --graph --decorate --all'
+alias vi='vim'
 
 
 # ===== Functions ===== #
