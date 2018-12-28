@@ -39,6 +39,12 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'vim-airline/vim-airline-themes'
 
+" Syntax
+Plug 'vim-python/python-syntax'
+Plug 'plasticboy/vim-markdown'
+Plug 'sirosen/vim-rockstar'
+Plug 'neovimhaskell/haskell-vim'
+
 " Unused?
 Plug 'tpope/vim-fugitive'
 
@@ -46,31 +52,27 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-tbone'
 Plug 'christoomey/vim-tmux-navigator'
 
+" Autocompletion
+"
 " deoplete (autocomplete engine)
 " (needs neovim python package installed)
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+" if has('nvim')
+"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"   Plug 'Shougo/deoplete.nvim'
+"   Plug 'roxma/nvim-yarp'
+"   Plug 'roxma/vim-hug-neovim-rpc'
+" endif
+"
+" Plug 'zchee/deoplete-jedi'
+Plug 'Valloric/YouCompleteMe'
 
 " Python
-Plug 'vim-python/python-syntax'
+" Plug 'davidhalter/jedi-vim'
 Plug 'tmhedberg/SimpylFold'
-Plug 'davidhalter/jedi-vim'
-Plug 'zchee/deoplete-jedi'
-
-" Haskell
-Plug 'neovimhaskell/haskell-vim'
 
 " Markdown
-Plug 'plasticboy/vim-markdown'
 Plug 'JamshedVesuna/vim-markdown-preview'
-
-" Rockstar
-Plug 'sirosen/vim-rockstar'
 
 
 " Conditionals
