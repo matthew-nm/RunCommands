@@ -66,6 +66,7 @@ Plug 'christoomey/vim-tmux-navigator'
 "
 " Plug 'zchee/deoplete-jedi'
 Plug 'Valloric/YouCompleteMe'
+  " https://github.com/Valloric/YouCompleteMe#installation
 
 " Python
 " Plug 'davidhalter/jedi-vim'

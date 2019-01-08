@@ -13,6 +13,7 @@ alias vcs='vcson'
 
 alias o="xdg-open"
 alias ll='ls -l'
+alias lla='ls -lA'
 alias swd='pwd > ~/Scripts/shell/wd'
 alias lwd='dir=$(cat ~/Scripts/shell/wd); cd $dir'
 alias clip='xsel -ib'
