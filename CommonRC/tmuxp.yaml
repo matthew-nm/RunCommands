@@ -9,7 +9,8 @@ windows:
       - git status
     - shell_command:
       - tmux select-pane -t 1
-      - watch -ct -n4 git log --graph --decorate --all --color=always
+      # - watch -ct -n4 git log --graph --decorate --all --color=always
+      - tig
   - window_name: Edit
     panes:
     - shell_command:
