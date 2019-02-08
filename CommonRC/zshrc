@@ -70,6 +70,11 @@ function vim-plug() {
     https://raw.github.com/junegunn/vim-plug/master/plug.vim
 }
 
+function gitnotify() {
+  inotifywait -m -r -e modify -e create -e close_write -e attrib .git/ | while read ; do
+    git --no-pager log --graph --decorate --color | head -n $((`tput lines`-1))
+  done
+}
 
 # ===== Other Crap ===== #
 
