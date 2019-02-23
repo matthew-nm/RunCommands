@@ -41,6 +41,7 @@ set term=xterm-256color
 set ttyfast
 set undodir=~/.undodir/
 set undofile
+set updatetime=500
 set wildmenu
 set wildmode=list:longest
 
@@ -314,3 +315,8 @@ highlight TabLineFill  ctermfg=235
 " ale (linter engine)
 highlight ALEErrorSign   ctermbg=235 ctermfg=160
 highlight ALEWarningSign ctermbg=235 ctermfg=178
+
+" Git Gutter (git changes)
+highlight GitGutterAdd    ctermbg=235 ctermfg=002
+highlight GitGutterChange ctermbg=235 ctermfg=220
+highlight GitGutterDelete ctermbg=235 ctermfg=001
