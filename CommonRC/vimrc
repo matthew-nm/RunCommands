@@ -159,9 +159,6 @@ vnoremap ty :Tyank<cr>
 " Fold level 1
 nmap z1 :set foldlevel=1<cr>
 
-" Rainbow parentheses
-nmap ;R :RainbowToggle<cr>
-
 " Sudo Save
 "   To use this command, type :Sudow
 "   Note: all custom commands must start uppercase
@@ -183,12 +180,6 @@ command! ReplaceWordUnderCursor
   \ :execute ":%s/\\<".b:foo."\\>/".b:bar."/g"          |
   \ :execute "?\\<".b:bar."\\>"                         |
   \ call winrestview(b:bufview)
-
-" IDE mode
-command! IDE
-  \ call deoplete#enable()
-command! NoIDE
-  \ call deoplete#disable()
 
 " <CR>: close popup and save indent
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>

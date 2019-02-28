@@ -55,18 +55,6 @@ Plug 'tpope/vim-tbone'
 Plug 'christoomey/vim-tmux-navigator'
 
 " Autocompletion
-"
-" deoplete (autocomplete engine)
-" (needs neovim python package installed)
-" if has('nvim')
-"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" else
-"   Plug 'Shougo/deoplete.nvim'
-"   Plug 'roxma/nvim-yarp'
-"   Plug 'roxma/vim-hug-neovim-rpc'
-" endif
-"
-" Plug 'zchee/deoplete-jedi'
 Plug 'Valloric/YouCompleteMe'
   " https://github.com/Valloric/YouCompleteMe#installation
 
