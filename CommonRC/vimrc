@@ -271,6 +271,9 @@ autocmd FileType * setlocal fo-=c fo-=r fo-=o
 " Don't wrap mid-word (for text files)
 autocmd FileType text,markdown set linebreak
 
+" Don't conceal (dont use indentLine plugin)
+autocmd FileType json,markdown let indentLine_enabled = 0
+
 " Other...
 autocmd FileType json call ShowTrailingWhitespace#SetLocalExtraPattern(',\s$')
 
