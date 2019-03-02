@@ -280,25 +280,25 @@ let g:python3_host_prog = expand('~/bin/python')
 
 " ----- COLORS ----- "
 
-highlight Statement    ctermfg=221
-highlight Comment      ctermfg=249
-highlight Folded       ctermfg=209 ctermbg=NONE
-
-highlight MatchParen   ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE
-"highlight MatchParen   ctermfg=226 ctermbg=NONE
-
-highlight LineNr       ctermfg=252 ctermbg=235
-highlight CursorLineNr ctermfg=171 ctermbg=235
-highlight SignColumn   ctermbg=235
-highlight VertSplit    ctermbg=239 ctermfg=235
-
-highlight CursorLine   ctermbg=235 cterm=NONE
-highlight CursorColumn ctermbg=235
-highlight ColorColumn  ctermbg=235
-
-"highlight TabLine      ctermfg= ctermbg=
-highlight TabLineSel   ctermfg=015 ctermbg=000
-highlight TabLineFill  ctermfg=235
+"highlight Statement    ctermfg=221
+"highlight Comment      ctermfg=249
+"highlight Folded       ctermfg=209 ctermbg=NONE
+"
+"highlight MatchParen   ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE
+""highlight MatchParen   ctermfg=226 ctermbg=NONE
+"
+"highlight LineNr       ctermfg=252 ctermbg=235
+"highlight CursorLineNr ctermfg=171 ctermbg=235
+"highlight SignColumn   ctermbg=235
+"highlight VertSplit    ctermbg=239 ctermfg=235
+"
+"highlight CursorLine   ctermbg=235 cterm=NONE
+"highlight CursorColumn ctermbg=235
+"highlight ColorColumn  ctermbg=235
+"
+""highlight TabLine      ctermfg= ctermbg=
+"highlight TabLineSel   ctermfg=015 ctermbg=000
+"highlight TabLineFill  ctermfg=235
 
 " ale (linter engine)
 highlight ALEErrorSign   ctermbg=235 ctermfg=160
