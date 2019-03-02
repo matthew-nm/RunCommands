@@ -38,6 +38,8 @@ Plug 'Yggdroot/indentLine'
 " Themes
 Plug 'ayu-theme/ayu-vim'
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'bounceme/base.vim'
+Plug 'gregsexton/Muon'
 Plug 'vim-airline/vim-airline-themes'
 
 " Syntax
