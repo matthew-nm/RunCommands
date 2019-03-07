@@ -137,3 +137,9 @@ preexec() {
     #echo DISPLAY = $DISPLAY, display file = `cat ~/.display`, STY = $STY, TMUX = $TMUX
 }
 #trap 'preexec' DEBUG
+
+# Startup
+if [ "${"$(env|grep KONSOLE_DBUS_SESSION)": -1}" = "1" ]; then
+  command -v neofetch > /dev/null && neofetch
+fi
+
