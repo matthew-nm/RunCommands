@@ -41,6 +41,8 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'bounceme/base.vim'
 Plug 'gregsexton/Muon'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tjammer/blayu.vim'
+Plug 'Dru89/vim-adventurous'
 
 " Syntax
 Plug 'vim-python/python-syntax'

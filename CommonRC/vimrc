@@ -3,7 +3,7 @@
 " Theme
 " set termguicolors
 set background=dark
-colorscheme base
+colorscheme adventurous
 let g:airline_theme='distinguished'
 " fixes
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -256,6 +256,9 @@ augroup END
 command! Changes
   \ :!git commit -am "Changes." && git push github
 
+command! Wrapon :set wrap
+command! Wrapoff :set wrap!
+
 
 " ----- FILETYPE SPECIFIC ----- "
 
@@ -281,16 +284,22 @@ let g:python3_host_prog = expand('~/bin/python')
 " ----- COLORS ----- "
 
 "highlight Statement    ctermfg=221
-"highlight Comment      ctermfg=249
-"highlight Folded       ctermfg=209 ctermbg=NONE
+"highlight Normal       ctermfg=254
+highlight Comment      ctermfg=246
+"highlight String       ctermfg=081
+
+highlight Folded       ctermfg=209 ctermbg=NONE
+hi IncSearch    ctermbg=214 cterm=underline
+hi Search       ctermbg=214 cterm=none
+hi Todo ctermfg=196 ctermbg=none cterm=none
 "
-"highlight MatchParen   ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE
+"highlight MatchParen   ctermfg=160 ctermbg=NONE
 ""highlight MatchParen   ctermfg=226 ctermbg=NONE
 "
 "highlight LineNr       ctermfg=252 ctermbg=235
 "highlight CursorLineNr ctermfg=171 ctermbg=235
 "highlight SignColumn   ctermbg=235
-"highlight VertSplit    ctermbg=239 ctermfg=235
+"highlight VertSplit    ctermbg=228 ctermfg=201
 "
 "highlight CursorLine   ctermbg=235 cterm=NONE
 "highlight CursorColumn ctermbg=235
