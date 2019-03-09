@@ -2,7 +2,7 @@
 
 " Theme
 " set termguicolors
-set background=dark
+" set background=dark
 colorscheme adventurous
 let g:airline_theme='distinguished'
 " fixes
@@ -53,6 +53,8 @@ set tabstop=2
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
+" Fillchars
+set fillchars=vert:│,fold:—
 
 " Redraw syntax highlighting w/ <F12> (in case of errors)
 noremap <F12> <Esc>:syntax sync fromstart<cr> \| :GitGutter<cr>
@@ -289,19 +291,23 @@ highlight Comment      ctermfg=246
 "highlight String       ctermfg=081
 
 highlight Folded       ctermfg=209 ctermbg=NONE
-hi IncSearch    ctermbg=214 cterm=underline
+" hi IncSearch    ctermbg=214 cterm=underline
 hi Search       ctermbg=214 cterm=none
 hi Todo ctermfg=196 ctermbg=none cterm=none
+hi Type cterm=none
+hi Constant ctermfg=37
+hi Identifier ctermfg=33
+hi Special ctermfg=224
 "
-"highlight MatchParen   ctermfg=160 ctermbg=NONE
+highlight MatchParen   ctermfg=196 ctermbg=NONE cterm=none
 ""highlight MatchParen   ctermfg=226 ctermbg=NONE
 "
-"highlight LineNr       ctermfg=252 ctermbg=235
-"highlight CursorLineNr ctermfg=171 ctermbg=235
-"highlight SignColumn   ctermbg=235
+highlight LineNr       ctermbg=none
+highlight CursorLineNr ctermfg=214 ctermbg=235
+" highlight SignColumn   ctermbg=none ctermfg=none
 "highlight VertSplit    ctermbg=228 ctermfg=201
-"
-"highlight CursorLine   ctermbg=235 cterm=NONE
+
+highlight CursorLine   ctermbg=235 cterm=NONE
 "highlight CursorColumn ctermbg=235
 "highlight ColorColumn  ctermbg=235
 "
@@ -310,10 +316,10 @@ hi Todo ctermfg=196 ctermbg=none cterm=none
 "highlight TabLineFill  ctermfg=235
 
 " ale (linter engine)
-highlight ALEErrorSign   ctermbg=235 ctermfg=160
-highlight ALEWarningSign ctermbg=235 ctermfg=178
+highlight ALEErrorSign   ctermbg=none ctermfg=160
+highlight ALEWarningSign ctermbg=none ctermfg=178
 
 " Git Gutter (git changes)
-highlight GitGutterAdd    ctermbg=235 ctermfg=002
-highlight GitGutterChange ctermbg=235 ctermfg=220
-highlight GitGutterDelete ctermbg=235 ctermfg=001
+highlight GitGutterAdd    ctermbg=none ctermfg=002
+highlight GitGutterChange ctermbg=none ctermfg=220
+highlight GitGutterDelete ctermbg=none ctermfg=001
