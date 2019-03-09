@@ -305,7 +305,7 @@ highlight MatchParen   ctermfg=196 ctermbg=NONE cterm=none
 highlight LineNr       ctermbg=none
 highlight CursorLineNr ctermfg=214 ctermbg=235
 " highlight SignColumn   ctermbg=none ctermfg=none
-"highlight VertSplit    ctermbg=228 ctermfg=201
+highlight VertSplit    ctermbg=none ctermfg=235
 
 highlight CursorLine   ctermbg=235 cterm=NONE
 "highlight CursorColumn ctermbg=235
