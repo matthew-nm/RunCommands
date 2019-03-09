@@ -150,6 +150,11 @@ let g:indentLine_char = '│'
 let vim_markdown_preview_hotkey = '<C-m>'
 
 
+" ----- Markdown sytnax ----- "
+
+let g:vim_markdown_conceal = 0
+
+
 " ----- jedi-vim ----- "
 
 " Disable automatic package completions
