@@ -274,6 +274,7 @@ autocmd FileType text,markdown set linebreak
 autocmd FileType json,markdown let indentLine_enabled = 0
 
 " Other...
+autocmd FileType python hi pythonSpaceError ctermfg=none ctermbg=none
 autocmd FileType json call ShowTrailingWhitespace#SetLocalExtraPattern(',\s$')
 
 
