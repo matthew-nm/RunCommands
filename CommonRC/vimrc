@@ -286,19 +286,20 @@ let g:python3_host_prog = expand('~/bin/python')
 
 " ----- COLORS ----- "
 
-"highlight Statement    ctermfg=221
-" highlight Normal       ctermfg=158
+highlight Normal       ctermfg=195
 highlight Comment      ctermfg=246
-highlight String       ctermfg=141
+highlight String       ctermfg=213
 
 highlight Folded       ctermfg=209 ctermbg=NONE
 " hi IncSearch    ctermbg=214 cterm=underline
 hi Search       ctermbg=214 cterm=none
 hi Todo ctermfg=196 ctermbg=none cterm=none
 hi Type cterm=none
-hi Constant ctermfg=37
-hi Identifier ctermfg=39
+hi Constant ctermfg=43
+hi Identifier ctermfg=45
 hi Special ctermfg=224
+hi PreProc ctermfg=045
+hi Statement ctermfg=198
 "
 highlight MatchParen   ctermfg=196 ctermbg=NONE cterm=none
 ""highlight MatchParen   ctermfg=226 ctermbg=NONE
