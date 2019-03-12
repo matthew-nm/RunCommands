@@ -6,7 +6,7 @@ windows:
     - shell_command:
       - tmux rename-session ${PWD##*/}
       - clear
-      - git status
+      # - git status
     - shell_command:
       - tmux select-pane -t 1
       - gitnotify
