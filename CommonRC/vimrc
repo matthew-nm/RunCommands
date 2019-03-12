@@ -109,6 +109,8 @@ map <leader>f :Files<cr>
 " Tabularize
 nmap <Leader>a= :Tabularize /=<cr>
 vmap <Leader>a= :Tabularize /=<cr>
+nmap <Leader>a: :Tabularize /:<cr>
+vmap <Leader>a: :Tabularize /:<cr>
 nmap <Leader>a<bar> :Tabularize /<bar><cr>
 vmap <Leader>a<bar> :Tabularize /<bar><cr>
 
@@ -212,7 +214,7 @@ nmap <space><space> /\<\><Left><Left>
 " ----- BUFFERS / FILES ----- "
 
 " Save on losing focus
-au FocusLost * :wa
+" au FocusLost * :wa
 
 " Write all buffers before navigating from vim to tmux pane
 let g:tmux_navigator_save_on_switch = 2
@@ -271,7 +273,7 @@ autocmd FileType * setlocal fo-=c fo-=r fo-=o
 autocmd FileType text,markdown set linebreak
 
 " Don't conceal (dont use indentLine plugin)
-autocmd FileType json,markdown let indentLine_enabled = 0
+autocmd FileType json,markdown let indentLine_enabled=0
 
 " Other...
 autocmd FileType python hi pythonSpaceError ctermfg=none ctermbg=none
@@ -286,11 +288,12 @@ let g:python3_host_prog = expand('~/bin/python')
 
 " ----- COLORS ----- "
 
-highlight Normal       ctermfg=195
-highlight Comment      ctermfg=246
-highlight String       ctermfg=213
+hi Normal       ctermfg=195
+hi Visual ctermbg=52
+hi Comment      ctermfg=246
+hi String       ctermfg=213
 
-highlight Folded       ctermfg=209 ctermbg=NONE
+hi Folded       ctermfg=49 ctermbg=NONE
 " hi IncSearch    ctermbg=214 cterm=underline
 hi Search       ctermbg=214 cterm=none
 hi Todo ctermfg=196 ctermbg=none cterm=none
@@ -300,28 +303,34 @@ hi Identifier ctermfg=45
 hi Special ctermfg=224
 hi PreProc ctermfg=045
 hi Statement ctermfg=198
-"
-highlight MatchParen   ctermfg=196 ctermbg=NONE cterm=none
-""highlight MatchParen   ctermfg=226 ctermbg=NONE
-"
-highlight LineNr       ctermbg=none
-highlight CursorLineNr ctermfg=214 ctermbg=235
-" highlight SignColumn   ctermbg=none ctermfg=none
-highlight VertSplit    ctermbg=none ctermfg=235
+hi Directory ctermfg=36
 
-highlight CursorLine   ctermbg=235 cterm=NONE
-"highlight CursorColumn ctermbg=235
-"highlight ColorColumn  ctermbg=235
+hi TabLineSel ctermfg=36 ctermbg=none
+hi TabLine ctermfg=245 ctermbg=none
+hi TabLineFill ctermbg=none
+hi Title ctermfg=045
 "
-""highlight TabLine      ctermfg= ctermbg=
-"highlight TabLineSel   ctermfg=015 ctermbg=000
-"highlight TabLineFill  ctermfg=235
+hi MatchParen   ctermfg=196 ctermbg=NONE cterm=none
+""hi MatchParen   ctermfg=226 ctermbg=NONE
+"
+hi LineNr       ctermbg=none
+hi CursorLineNr ctermfg=214 ctermbg=235
+hi CursorLine   ctermbg=235 cterm=NONE
+" hi SignColumn   ctermbg=none ctermfg=none
+hi VertSplit    ctermbg=none ctermfg=236
+
+"hi CursorColumn ctermbg=235
+"hi ColorColumn  ctermbg=235
+"
+""hi TabLine      ctermfg= ctermbg=
+"hi TabLineSel   ctermfg=015 ctermbg=000
+"hi TabLineFill  ctermfg=235
 
 " ale (linter engine)
-highlight ALEErrorSign   ctermbg=none ctermfg=160
-highlight ALEWarningSign ctermbg=none ctermfg=178
+hi ALEErrorSign   ctermbg=none ctermfg=160
+hi ALEWarningSign ctermbg=none ctermfg=178
 
 " Git Gutter (git changes)
-highlight GitGutterAdd    ctermbg=none ctermfg=002
-highlight GitGutterChange ctermbg=none ctermfg=220
-highlight GitGutterDelete ctermbg=none ctermfg=001
+hi GitGutterAdd    ctermbg=none ctermfg=002
+hi GitGutterChange ctermbg=none ctermfg=220
+hi GitGutterDelete ctermbg=none ctermfg=001
