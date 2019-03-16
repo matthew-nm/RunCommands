@@ -303,7 +303,10 @@ hi Identifier ctermfg=45
 hi Special ctermfg=224
 hi PreProc ctermfg=045
 hi Statement ctermfg=198
+hi Conditional ctermfg=206
 hi Directory ctermfg=36
+hi Operator ctermfg=87
+hi Function ctermfg=45
 
 hi TabLineSel ctermfg=36 ctermbg=none
 hi TabLine ctermfg=245 ctermbg=none
