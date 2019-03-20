@@ -291,22 +291,22 @@ let g:python3_host_prog = expand('~/bin/python')
 hi Normal       ctermfg=195
 hi Visual ctermbg=52
 hi Comment      ctermfg=246
-hi String       ctermfg=222
+hi String       ctermfg=212
 
 hi Folded       ctermfg=49 ctermbg=NONE
 " hi IncSearch    ctermbg=214 cterm=underline
 hi Search       ctermbg=214 cterm=none
 hi Todo ctermfg=196 ctermbg=none cterm=none
-hi Type ctermfg=180 cterm=none
-hi Constant ctermfg=42
+hi Type cterm=none
+hi Constant ctermfg=43
 hi Identifier ctermfg=45
-hi Special ctermfg=117 cterm=bold
-hi PreProc ctermfg=043
+hi Special ctermfg=224
+hi PreProc ctermfg=045
 hi Statement ctermfg=198
-hi Conditional ctermfg=206
 hi Directory ctermfg=36
-hi Operator ctermfg=87
-hi Function ctermfg=45
+hi Conditional ctermfg=208
+hi Operator ctermfg=45
+hi Function ctermfg=191
 
 hi TabLineSel ctermfg=36 ctermbg=none
 hi TabLine ctermfg=245 ctermbg=none
