@@ -34,6 +34,8 @@ Plug 'mbbill/undotree'
 Plug 'kien/tabman.vim'
 Plug 'luochen1990/rainbow'
 Plug 'Yggdroot/indentLine'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 
 " Themes
 Plug 'ayu-theme/ayu-vim'
