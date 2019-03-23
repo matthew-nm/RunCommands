@@ -73,7 +73,7 @@ function vim-plug() {
 function gitnotify() {
   inotifywait -m -r -e modify -e create -e close_write -e attrib .git/ | while read ; do
     clear
-    git --no-pager log --graph --decorate --color | head -n $((`tput lines`-1))
+    git --no-pager log --graph --decorate --color | head -n $((`tput lines`-2))
   done
 }
 
@@ -138,8 +138,12 @@ preexec() {
 }
 #trap 'preexec' DEBUG
 
-# Startup
-if [ "${"$(env|grep KONSOLE_DBUS_SESSION)": -1}" = "1" ]; then
-  command -v neofetch > /dev/null && neofetch
+# Turn vcs off if tmux
+if [ "$TMUX_PWD" = "$PWD" ]; then
+  VCS_OFF=1
 fi
 
+# Pretty picture startup
+if [ "${"$(env|grep KONSOLE_DBUS_SESSION)": -1}" = "1" ] && [ "$TMUX" = "" ]; then
+  command -v neofetch > /dev/null && neofetch
+fi

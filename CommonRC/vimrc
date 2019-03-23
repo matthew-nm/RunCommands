@@ -101,7 +101,11 @@ nmap <silent> <leader>e :NERDTreeToggle<cr>
 nmap <silent> <leader>E :TagbarToggle<cr>
 
 " Toggle tabman
-let g:tabman_toggle = '<leader>T'
+let g:tabman_toggle = '<leader>TT'
+
+" New tabs
+nmap <leader>T0 :$tabnew<cr>
+nmap <leader>T$ :$tabnew<cr>
 
 " fzf (fuzzy file finder)
 map <leader>f :Files<cr>
@@ -149,8 +153,30 @@ inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
-inoremap {<cr> {<cr>}<esc>O
-inoremap {;<cr> {<cr>};<esc>O
+inoremap "" ""
+inoremap '' ''
+inoremap """ """"""<left><left><left>
+inoremap "<bs> .<bs>
+inoremap '<bs> .<bs>
+inoremap (<bs> .<bs>
+inoremap [<bs> .<bs>
+inoremap {<bs> .<bs>
+inoremap "<space> "<space>
+inoremap '<space> '<space>
+" inoremap """<space> """<space>
+inoremap (<space> (<space><space>)<left><left>
+inoremap [<space> [<space><space>]<left><left>
+inoremap {<space> {<space><space>}<left><left>
+inoremap """<space> """<space><space>"""<left><left><left><left>
+inoremap (<cr> (<cr>)<esc>O<tab>
+inoremap [<cr> [<cr>]<esc>O<tab>
+inoremap {<cr> {<cr>}<esc>O<tab>
+inoremap {;<cr> {<cr>};<esc>O<tab>
+inoremap """<cr> """<cr>"""<esc>O
+
+" Skip next character
+" TODO implement function that checks for current char
+" and skips over it if under cursor
 
 " Move to next lint error
 map <silent> <F1> :ALENextWrap<cr>

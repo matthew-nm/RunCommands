@@ -4,11 +4,14 @@ windows:
     layout: even-horizontal
     panes:
     - shell_command:
+      - tmux setenv TMUX_PWD $PWD
       - tmux rename-session ${PWD##*/}
+      - vcson
       - clear
-      # - git status
+      - git status
     - shell_command:
       - tmux select-pane -t 1
+      - vcsoff
       - gitnotify
       # - watch -ct -n4 git log --graph --decorate --all --color=always
       # - tig
