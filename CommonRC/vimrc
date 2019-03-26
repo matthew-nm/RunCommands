@@ -293,7 +293,7 @@ augroup END
 " ----- EDITING ENVIRONMENT ----- "
 
 command! Changes
-  \ :!git commit -am "Changes" && git push github
+  \ :!git commit -am "Changes" && git push origin
 
 command! Wrapon :set wrap
 command! Wrapoff :set wrap!
