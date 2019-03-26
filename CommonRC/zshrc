@@ -138,6 +138,17 @@ preexec() {
 }
 #trap 'preexec' DEBUG
 
+# Move into symdirs
+for key val in ${(kv)SYMDIRS}; do
+  if [[ $PWD == $key* ]]; then
+    cd $val${PWD:${#key}}
+    break
+  fi
+done
+# Example assoc array for private zshrc
+# typeset -A SYMDIRS
+# SYMDIRS[/mnt/Data/Dropbox]='/home/matthew/Dropbox'
+
 # Turn vcs off if tmux
 if [ "$TMUX_PWD" = "$PWD" ]; then
   VCS_OFF=1
