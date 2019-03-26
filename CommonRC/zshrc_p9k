@@ -84,4 +84,7 @@ POWERLEVEL9K_ANACONDA_BACKGROUND="none"
 # Final functions
 if [ $VCS_OFF = 1 ]; then
   vcsoff
+  VCS_OFF=0
+else
+  vcson
 fi

@@ -149,10 +149,19 @@ done
 # typeset -A SYMDIRS
 # SYMDIRS[/mnt/Data/Dropbox]='/home/matthew/Dropbox'
 
-# Turn vcs off if tmux
+# Turn vcs off in new shells if tmux
 if [ "$TMUX_PWD" = "$PWD" ]; then
   VCS_OFF=1
 fi
+
+# Turn vcs on/off when changing dirs in tmux
+chpwd() {
+  if [ "$TMUX_PWD" = "$PWD" ]; then
+    vcsoff
+  else
+    vcson
+  fi
+}
 
 # Pretty picture startup
 if [ "${"$(env|grep KONSOLE_DBUS_SESSION)": -1}" = "1" ] && [ "$TMUX" = "" ]; then
