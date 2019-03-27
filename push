@@ -1,2 +1,2 @@
 #!/bin/bash
-git commit -am "Changes" && git push github
+git commit -am "Changes" && git push origin
