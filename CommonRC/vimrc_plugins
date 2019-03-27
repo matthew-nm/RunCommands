@@ -34,8 +34,7 @@ Plug 'mbbill/undotree'
 Plug 'kien/tabman.vim'
 Plug 'luochen1990/rainbow'
 Plug 'Yggdroot/indentLine'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
+Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-characterize'
 
 " Themes
@@ -68,9 +67,6 @@ Plug 'Valloric/YouCompleteMe'
 " Python
 " Plug 'davidhalter/jedi-vim'
 Plug 'tmhedberg/SimpylFold'
-
-" Markdown
-Plug 'JamshedVesuna/vim-markdown-preview'
 
 
 " Conditionals
@@ -148,9 +144,10 @@ endfunction
 let g:indentLine_char = '│'
 
 
-" ----- Markdown Preview ----- '
+" ----- auto-pair ----- "
 
-let vim_markdown_preview_hotkey = '<C-m>'
+let g:AutoPairsFormat = 0
+let g:AutoPairsIndent = 1
 
 
 " ----- Markdown sytnax ----- "
