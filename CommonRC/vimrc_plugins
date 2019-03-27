@@ -34,7 +34,7 @@ Plug 'mbbill/undotree'
 Plug 'kien/tabman.vim'
 Plug 'luochen1990/rainbow'
 Plug 'Yggdroot/indentLine'
-Plug 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs', { 'branch': 'format' }
 Plug 'tpope/vim-characterize'
 
 " Themes
