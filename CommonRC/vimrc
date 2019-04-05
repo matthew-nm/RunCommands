@@ -108,7 +108,13 @@ nmap <leader>T0 :$tabnew<cr>
 nmap <leader>T$ :$tabnew<cr>
 
 " fzf (fuzzy file finder)
-map <leader>f :Files<cr>
+nmap <leader>f :Files<cr>
+
+" YouCompleteMe GoTo
+nnoremap <leader>jd :YcmCompleter GoTo<cr>
+nnoremap <leader>jr :YcmCompleter GoToReferences<cr>
+nnoremap <silent> <leader>gt :YcmCompleter GetType<cr>
+nnoremap <leader>gd :YcmCompleter GetDoc<cr>
 
 " Tabularize
 nmap <Leader>a= :Tabularize /=<cr>
