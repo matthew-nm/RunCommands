@@ -15,8 +15,8 @@ call plug#begin()
 "Plug 'user/repo', 'branch_or_tag'
 
 " General
-Plug 'scrooloose/nerdtree'
-Plug 'aufgang001/vim-nerdtree_plugin_open'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'aufgang001/vim-nerdtree_plugin_open', { 'on': 'NERDTreeToggle' }
 Plug 'majutsushi/tagbar' "needs universal-ctags intalled
 Plug 'vim-airline/vim-airline'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -61,11 +61,13 @@ Plug 'tpope/vim-tbone'
 Plug 'christoomey/vim-tmux-navigator'
 
 " Autocompletion
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'for': [] }
+augroup plug_xtype
+  autocmd FileType * if expand('<amatch>') != 'gitcommit' | call plug#load('YouCompleteMe') | execute 'autocmd! plug_xtype' | endif
+augroup END
   " https://github.com/Valloric/YouCompleteMe#installation
 
 " Python
-" Plug 'davidhalter/jedi-vim'
 Plug 'tmhedberg/SimpylFold'
 
 
@@ -95,7 +97,7 @@ let g:airline_symbols.maxlinenr = ''
 
 " Get rid of whitespace warning
 silent! call airline#extensions#whitespace#disable()
-let g:airline_section_warning = airline#section#create(['ycm_warning_count','syntastic-warn'])
+let g:airline_section_warning = airline#section#create(['ycm_warning_count'])
 
 
 " ----- NERDTree ----- "
@@ -155,15 +157,6 @@ let g:AutoPairsIndent = 1
 " ----- Markdown sytnax ----- "
 
 let g:vim_markdown_conceal = 0
-
-
-" ----- jedi-vim ----- "
-
-" Disable automatic package completions
-let g:jedi#popup_on_dot = 0
-
-" Disable mappings
-let g:jedi#rename_command = ''
 
 
 " ----- supertab ----- "
