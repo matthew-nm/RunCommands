@@ -34,7 +34,7 @@ Plug 'mbbill/undotree'
 Plug 'kien/tabman.vim'
 Plug 'luochen1990/rainbow'
 Plug 'Yggdroot/indentLine'
-Plug 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs', { 'branch': 'format' }
 Plug 'tpope/vim-characterize'
 
 " Themes
@@ -120,7 +120,9 @@ let g:NERDTreeMapJumpPrevSibling = '<Nop>'
 " ----- YouCompleteMe ----- "
 
 let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1  " if this is set, former is irrelevant
+let g:ycm_autoclose_preview_window_after_completion = 0
+  " if this is set to 1, former is irrelevant
+  " setting to 0 prevents closing when using automatic bracket plugin
 
 
 " ----- tabular ----- "
