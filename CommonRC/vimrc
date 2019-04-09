@@ -164,8 +164,9 @@ vnoremap <C-c> "+y
 nnoremap ty :Tyank<cr>
 vnoremap ty :Tyank<cr>
 
-" Fold level 1
+" Fold level
 nmap z1 :set foldlevel=1<cr>
+nmap z2 :set foldlevel=2<cr>
 
 " Sudo Save
 "   To use this command, type :Sudow
