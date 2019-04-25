@@ -165,8 +165,9 @@ vnoremap <C-c> "+y
 nnoremap ty :Tyank<cr>
 vnoremap ty :Tyank<cr>
 
-" Fold level 1
+" Fold level
 nmap z1 :set foldlevel=1<cr>
+nmap z2 :set foldlevel=2<cr>
 
 " Sudo Save
 "   To use this command, type :Sudow
@@ -282,9 +283,6 @@ autocmd FileType * setlocal fo-=c fo-=r fo-=o
 
 " Don't wrap mid-word (for text files)
 autocmd FileType text,markdown set linebreak
-
-" Don't conceal (dont use indentLine plugin)
-autocmd FileType json,markdown let indentLine_enabled=0
 
 " Other...
 autocmd FileType python hi pythonSpaceError ctermfg=none ctermbg=none
