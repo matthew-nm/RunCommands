@@ -27,6 +27,7 @@ set mouse+=a
 set ttymouse=xterm2
 set number
 set pastetoggle=<F3>
+set relativenumber
 set ruler
 set scrolloff=7
 set showcmd
