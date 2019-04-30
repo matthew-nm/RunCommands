@@ -300,7 +300,7 @@ let g:python3_host_prog = expand('~/bin/python')
 hi Normal       ctermfg=195 ctermbg=233
 hi Visual ctermbg=52
 hi Comment      ctermfg=247
-hi String       ctermfg=802
+hi String       ctermfg=80
 
 hi Folded       ctermfg=49 ctermbg=NONE
 " hi IncSearch    ctermbg=214 cterm=underline
