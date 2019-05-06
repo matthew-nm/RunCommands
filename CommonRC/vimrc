@@ -105,7 +105,7 @@ nmap <silent> <leader>E :TagbarToggle<cr>
 let g:tabman_toggle = '<leader>TT'
 
 " New tabs
-nmap <leader>T0 :$tabnew<cr>
+nmap <leader>T0 :0tabnew<cr>
 nmap <leader>T$ :$tabnew<cr>
 
 " fzf (fuzzy file finder)
