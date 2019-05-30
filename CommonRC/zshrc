@@ -80,9 +80,17 @@ function gitnotify() {
 
 # ===== Plugins ===== #
 
+# autocomplete
 plugins=(zsh-completions)
 autoload -U compinit && compinit
 
+# pure prompt
+unset CONDA_DEFAULT_ENV
+autoload -U promptinit; promptinit
+prompt pure
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # ===== Other Crap ===== #
 
