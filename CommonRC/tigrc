@@ -1,6 +1,0 @@
-#set refresh-mode = periodic
-#set refresh-interval = 3
-
-set mouse = yes
-
-color cursor default black bold
