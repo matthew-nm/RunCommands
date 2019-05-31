@@ -8,13 +8,11 @@ windows:
       - tmux rename-session ${PWD##*/}
       - vcson
       - clear
-      - git status
+      - lazygit
     - shell_command:
-      - tmux select-pane -t 1
       - vcsoff
-      - gitnotify
-      # - watch -ct -n4 git log --graph --decorate --all --color=always
-      # - tig
+      - tmux select-pane -t 1
+      - clear
   - window_name: Edit
     panes:
     - shell_command:
