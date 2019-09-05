@@ -7,7 +7,7 @@ alias rootmount='echo mount\ -o\ remount,rw\ 0\ /'
 alias installrpm='rpm -ivh'
 alias installtar='tar -zxvf'
 alias sshserv='sudo rcsshd restart'
-alias cycleplasma='kquitapp5 plasmashell && kstart plasmashell'
+alias cycleplasma='kquitapp5 plasmashell && kstart5 plasmashell'
 alias color256='for code ({000..255}) print -P -- "$code: %F{$code}\u2588\u2588\u2588\u2588 These are colors!%f"'
 alias vcs='vcson'
 
